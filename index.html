@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❄️ Kar Tanesi Labirenti</title>
+    <style>
+        :root {
+            /* Canlı ve Renkli Gradyan */
+            --bg-gradient: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #4a4a4a;
+            --accent-color: #ff6b6b;
+            --btn-hover: #ee5253;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            position: fixed; top: 0; width: 100%; padding: 25px 0;
+            text-align: center; background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px); cursor: pointer;
+            font-weight: 900; letter-spacing: 4px; font-size: 1.5rem;
+            color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s; z-index: 1000;
+        }
+
+        #game-container {
+            background: var(--card-bg);
+            padding: 50px; border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            text-align: center; max-width: 500px; width: 85%;
+            transform: scale(1); transition: transform 0.3s;
+        }
+
+        h2 { margin-bottom: 30px; color: var(--text-color); font-size: 1.7rem; }
+
+        .button-group { display: flex; flex-direction: column; gap: 15px; }
+
+        button {
+            padding: 18px; border: none;
+            background: var(--accent-color); color: white;
+            border-radius: 15px; cursor: pointer; font-size: 1.2rem;
+            font-weight: 700; transition: all 0.2s;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        button:hover {
+            background: var(--btn-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+        }
+
+        #final-msg { display: none; font-size: 1.4rem; color: #10ac84; font-weight: bold; }
+    </style>
+</head>
+<body oncontextmenu="return false;"> <header onclick="resetGame()">❄️ KAR TANESİ</header>
+
+<div id="game-container">
+    <h2 id="question-text">Yükleniyor...</h2>
+    <div id="options-container" class="button-group"></div>
+    <p id="final-msg">🔒 Labirent bitti. Şimdi özgürsün.</p>
+</div>
+
+<script>
+    const questions = {
+        1: { text: "Merhaba Kar Tanesi", options: [ { text: "Merhaba", next: 2 }, { text: "Git başımdan", next: 1 } ] },
+        2: { text: "Kim olduğumu merak ediyor musun ?", options: [ { text: "Evet", next: 3 }, { text: "Hayır", next: 8 } ] },
+        3: { text: "Saat 7 yönünde arkandayım seni izliyorum", options: [ { text: "Gördüm", next: 4 }, { text: "Göremedim", next: 5 } ] },
+        4: { text: "Yalan atma orada değilim", options: [ { text: "Başımdan", next: 1 }, { text: "Pardon", next: 1 } ] },
+        5: { text: "Göremezsin zaten hahahahaha, ayağa kalkarsan sana işaret vericem", options: [ { text: "Kalktım", next: 6 }, { text: "Kalkmayacağım", next: 7 } ] },
+        6: { text: "Aferin adam ol Ayıcık, gözüm üzerinde", options: [ { text: "Aferin", next: 1 }, { text: "Git başımdan", next: 1 } ] },
+        7: { text: "Sen iflah olmazsın eninde sonunda bulucam", options: [ { text: "İflah olmam", next: 1 }, { text: "Uğraşma benle", next: 1 } ] },
+        8: { text: "Kimsin?", options: [ { text: "Anonim", next: 9 }, { text: "Ben senin anonim", next: 10 } ] },
+        9: { text: "Yanlış tercih", options: [ { text: "Bir daha deneyeyim mi", next: 1 }, { text: "Tekrar deniyecem", next: 1 } ] },
+        10: { text: "Aslında beni tanıyorsun ama neler yapabileceğimi bilmiyorsun. Şimdi sana bir soru sorucam ve kim olduğumu anlıyacaksın", options: [ { text: "Sor", next: 11 }, { text: "Sorma", next: 19 } ] },
+        11: { text: "Bir balık olsam ne olurdum", options: [ { text: "Koi balığı", next: 12 }, { text: "Beta balığı", next: 13 } ] },
+        12: { text: "Dım dım dım yanlış cevap", options: [ { text: "Try again", next: 11 }, { text: "Tekrar deneyin", next: 11 } ] },
+        13: { text: "Aferin çocuk adam iyi ilerliyorsun. Bir hayvan olsam ne olurdum", options: [ { text: "Kelebek", next: 14 }, { text: "K9", next: 17 } ] },
+        14: { text: "Aferin doğru cevap. En sevdiğim çizgi film karakteri", options: [ { text: "Judy Hopps", next: 15 }, { text: "Ömürcek Adam", next: 18 } ] },
+        15: { text: "Aferin Nick. Tahminin var mı", options: [ { text: "Evet", next: 16 }, { text: "Hayır", next: 1 } ] },
+        16: { text: "Tahmin ettiğin kişiye mesaj at", options: [ { text: "Tamam", next: 'FINISH' }, { text: "Atmıycam", next: 'FINISH' } ] },
+        17: { text: "Ya yazıklar olsun ben köpek miyim", options: [ { text: "Özür dilerim", next: 1 }, { text: "Telafi edicem", next: 13 } ] },
+        18: { text: "Yazıklar olsun hiç tanıyamamışsın", options: [ { text: "Tüh", next: 'FINISH' }, { text: "Eyvah", next: 'FINISH' } ] },
+        19: { text: "Hayır sorucam", options: [ { text: "Umrumda değil", next: 20 }, { text: "Tamam nalet olsun", next: 10 } ] },
+        20: { text: "Bence merak etmelisin", options: [ { text: "Tamam kimsin", next: 10 }, { text: "Merak etmiyorum", next: 21 } ] },
+        21: { text: "Pişman olucaksın", options: [ { text: "Olayım", next: 1 }, { text: "Sen kimsin", next: 10 } ] }
+    };
+
+    let currentStep = 1;
+
+    function renderQuestion() {
+        if (currentStep === 'FINISH') {
+            document.getElementById('question-text').innerText = "Oyun Bitti.";
+            document.getElementById('options-container').style.display = 'none';
+            document.getElementById('final-msg').style.display = 'block';
+            return;
+        }
+        const data = questions[currentStep];
+        document.getElementById('question-text').innerText = data.text;
+        const container = document.getElementById('options-container');
+        container.innerHTML = '';
+        data.options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.innerText = opt.text;
+            btn.onclick = () => { currentStep = opt.next; renderQuestion(); };
+            container.appendChild(btn);
+        });
+    }
+
+    function resetGame() {
+        currentStep = 1;
+        document.getElementById('options-container').style.display = 'flex';
+        document.getElementById('final-msg').style.display = 'none';
+        renderQuestion();
+    }
+
+    // --- KAÇIŞI ENGELLEME KODLARI ---
+
+    // 1. Sekmeyi Kapatmaya/Yenilemeye Çalışınca Uyarı
+    window.addEventListener('beforeunload', function (e) {
+        // Bu mesaj çoğu modern tarayıcıda artık sabit bir metinle gösterilir.
+        e.preventDefault();
+        e.returnValue = ''; 
+        // Eğer kullanıcı "Kal" derse, sistemi gizlice en başa atıyoruz:
+        setTimeout(resetGame, 100);
+    });
+
+    // 2. Geri Tuşunu Engelleme
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function() {
+        resetGame();
+        window.history.pushState(null, "", window.location.href);
+    };
+
+    renderQuestion();
+</script>
+</body>
+</html>
