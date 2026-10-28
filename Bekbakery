@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bek Bakery & Coffee | Konyaaltı'nda Ailenizin Sıcak Taş Fırını ve Sohbet Köşesi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        alabaster: '#FDFBF7',
+                        parchment: '#F4ECE1',
+                        warmwhite: '#FFFFFF',
+                        crust: {
+                            light: '#E09A54',
+                            DEFAULT: '#C87832',
+                            dark: '#9E591D'
+                        },
+                        espresso: {
+                            DEFAULT: '#3A261D',
+                            soft: '#5E463B',
+                            muted: '#8A7267'
+                        },
+                        sage: {
+                            light: '#EBF2EE',
+                            DEFAULT: '#4E6E58',
+                            dark: '#375240'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #3A261D;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D8C7B4;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C87832;
+        }
+        .hero-artisan-bg {
+            background-image: linear-gradient(to right, rgba(58, 38, 29, 0.88) 0%, rgba(58, 38, 29, 0.72) 55%, rgba(58, 38, 29, 0.48) 100%), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1920&q=85');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-artisan {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-artisan:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 38px -15px rgba(58, 38, 29, 0.13);
+            border-color: rgba(200, 120, 50, 0.55);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-crust selection:text-white">
+
+    <!-- ÜST SAMİMİ KARŞILAMA VE İLETİŞİM BANTI -->
+    <div class="bg-espresso text-alabaster text-xs py-2.5 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center gap-4">
+                <span class="flex items-center gap-1.5">
+                    <i class="fa-solid fa-house-chimney-window text-crust-light"></i>
+                    <span>Konyaaltı'nda Ailenizin Sıcak Fırını • Anadolu Cd No: 154, Akkuyu (Akdeniz Üni. Arkası)</span>
+                </span>
+                <span id="live-status-badge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sage/30 border border-sage-light/30 text-sage-light font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Fırınımız Sıcak & Açık • Her Gün 07:00 – 23:00</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4 ml-auto">
+                <span class="hidden md:inline-flex items-center gap-1.5 text-alabaster/85">
+                    <i class="fa-solid fa-children text-crust-light"></i>
+                    <span>Bahçeli • Mama Sandalyeli • Ücretsiz Otoparklı</span>
+                </span>
+                <a href="tel:+905412165548" class="flex items-center gap-1.5 text-crust-light hover:text-white font-semibold transition">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0541 216 55 48</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVİGASYON BAR -->
+    <header class="sticky top-0 z-40 bg-alabaster/95 backdrop-blur-md border-b border-espresso/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Marka Logosu -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-espresso text-crust-light flex items-center justify-center shadow-md group-hover:bg-crust group-hover:text-white transition duration-300">
+                    <i class="fa-solid fa-wheat-awn text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-serif-heading text-xl sm:text-2xl font-bold tracking-tight text-espresso block leading-none">BEK BAKERY & COFFEE</span>
+                    <span class="text-[11px] uppercase tracking-[0.16em] text-crust font-semibold block mt-1">Ailenizin Mahalle Fırını • Konyaaltı</span>
+                </div>
+            </a>
+
+            <!-- Masaüstü Menü Linkleri -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-espresso-soft">
+                <a href="#hakkimizda" class="hover:text-crust transition py-2">Aile Soframız</a>
+                <a href="#menu" class="hover:text-crust transition py-2">Menümüz & Hikayeleri</a>
+                <a href="#deneyimler" class="hover:text-crust transition py-2">Merak Uyandıran Hikayeler</a>
+                <a href="#yorumlar" class="hover:text-crust transition py-2">Misafirlerimiz</a>
+                <a href="#rezervasyon" class="hover:text-crust transition py-2">Yer & Ekmek Ayırt</a>
+            </nav>
+
+            <!-- Sağ Aksiyon Butonları -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <a href="tel:+905412165548" class="hidden xl:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-parchment hover:bg-espresso hover:text-white text-espresso text-xs font-bold transition border border-espresso/10">
+                    <i class="fa-solid fa-phone text-crust"></i>
+                    <span>0541 216 55 48</span>
+                </a>
+
+                <!-- Masa Defterim Butonu ("Simülatör" kelimesi kaldırıldı) -->
+                <button onclick="toggleBillDrawer()" class="relative px-4 py-2.5 rounded-full bg-warmwhite border border-espresso/15 hover:border-crust text-espresso font-semibold text-xs sm:text-sm transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-book-open text-crust"></i>
+                    <span class="hidden sm:inline">Masa Defterim</span>
+                    <span id="bill-badge-count" class="w-5 h-5 rounded-full bg-crust text-white text-[11px] font-bold flex items-center justify-center">0</span>
+                </button>
+
+                <a href="#rezervasyon" class="hidden sm:inline-flex items-center gap-2 bg-crust hover:bg-crust-dark text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition shadow-md shadow-crust/20">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Sofrada Yer Ayırt</span>
+                </a>
+
+                <!-- Mobil Menü Butonu -->
+                <button onclick="toggleMobileNav()" class="lg:hidden p-2.5 rounded-xl bg-parchment text-espresso hover:text-crust border border-espresso/10">
+                    <i id="mobile-nav-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Açılır Menü -->
+        <div id="mobile-nav" class="hidden lg:hidden bg-warmwhite border-b border-espresso/10 px-4 pt-3 pb-6 space-y-2 shadow-lg">
+            <a href="#hakkimizda" onclick="toggleMobileNav()" class="block py-2.5 px-3 rounded-xl hover:bg-parchment text-espresso font-medium">Bizim Hikayemiz & Aile Soframız</a>
+            <a href="#menu" onclick="toggleMobileNav()" class="block py-2.5 px-3 rounded-xl hover:bg-parchment text-espresso font-medium">Menümüz (Hikaye & Alerjen Detaylı)</a>
+            <a href="#deneyimler" onclick="toggleMobileNav()" class="block py-2.5 px-3 rounded-xl hover:bg-parchment text-espresso font-medium">Fırınımızdan Merak Uyandıran Hikayeler</a>
+            <a href="#yorumlar" onclick="toggleMobileNav()" class="block py-2.5 px-3 rounded-xl hover:bg-parchment text-espresso font-medium">Misafir Yorumları (412+)</a>
+            <a href="#rezervasyon" onclick="toggleMobileNav()" class="block py-2.5 px-3 rounded-xl hover:bg-parchment text-espresso font-medium">Aile Masası & Sıcak Ekmek Ayırt</a>
+            <div class="pt-2 grid grid-cols-2 gap-2">
+                <a href="tel:+905412165548" class="flex items-center justify-center gap-2 py-3 rounded-full bg-parchment text-espresso font-bold text-xs">
+                    <i class="fa-solid fa-phone text-crust"></i> Bizi Arayın
+                </a>
+                <a href="#rezervasyon" onclick="toggleMobileNav()" class="flex items-center justify-center gap-2 py-3 rounded-full bg-crust text-white font-bold text-xs">
+                    <i class="fa-solid fa-heart"></i> Yerimizi Ayır
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO BÖLÜMÜ (SAMİMİ VE AİLE DOSTU KARŞILAMA) -->
+    <section class="hero-artisan-bg relative min-h-[82vh] flex items-center py-16 px-4 sm:px-6 lg:px-8 text-alabaster">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="max-w-3xl">
+                <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-crust/95 text-white text-xs font-semibold tracking-wide shadow">
+                        <i class="fa-solid fa-people-roof"></i> Konyaaltı'nda Ailenizin Sıcak Fırını ve Sohbet Köşesi
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-alabaster text-xs font-medium">
+                        <i class="fa-solid fa-seedling text-crust-light"></i> Çocuklar İçin %100 Katkısız & Doğal Ekşi Maya
+                    </span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.12] mb-6 text-warmwhite">
+                    Evinizdeki Kadar Samimi, <span class="italic font-normal text-crust-light">Anne Eli Değmiş Gibi</span> Sıcak Bir Sofra
+                </h1>
+
+                <p class="text-base sm:text-lg text-alabaster/95 leading-relaxed mb-8 max-w-2xl font-light">
+                    Sabah 07:00’de taş fırınımızdan yükselen ekşi mayalı ekmek kokusuyla uyanıyor; çocukların güvenle neşelendiği ferah bahçemizde, anne-babaların ve dostların huzurla sohbet ettiği doğal, samimi bir mahalle sıcaklığı sunuyoruz.
+                </p>
+
+                <!-- Hero CTA Butonları -->
+                <div class="flex flex-wrap items-center gap-4 mb-12">
+                    <a href="#menu" class="px-7 py-4 rounded-full bg-crust hover:bg-crust-light text-white font-bold text-sm sm:text-base transition flex items-center gap-2.5 shadow-xl shadow-black/25">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Lezzetlerimizi & Hikayelerini Keşfet</span>
+                    </a>
+                    <a href="#deneyimler" class="px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-semibold text-sm sm:text-base transition flex items-center gap-2.5">
+                        <i class="fa-solid fa-sparkles text-crust-light"></i>
+                        <span>Fırınımızın Sırlarını Oku</span>
+                    </a>
+                </div>
+
+                <!-- Öne Çıkan 4 Aile Dostu Bilgi Kartı -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 pt-8 border-t border-white/20">
+                    <div class="bg-espresso/80 backdrop-blur-md p-4 rounded-2xl border border-white/15">
+                        <div class="flex items-center gap-2 text-crust-light text-xs font-bold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-child-reaching"></i> Çocuk & Bebek Dostu
+                        </div>
+                        <div class="text-base sm:text-lg font-serif-heading font-bold text-white">Güvenli Bahçe & Mama Sandalyesi</div>
+                        <div class="text-[11px] text-alabaster/80 mt-0.5">Çocuklara özel katkısız menü seçenekleri</div>
+                    </div>
+
+                    <div class="bg-espresso/80 backdrop-blur-md p-4 rounded-2xl border border-white/15">
+                        <div class="flex items-center gap-2 text-crust-light text-xs font-bold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-wheat-awn"></i> Temiz İçerik Sözü
+                        </div>
+                        <div class="text-base sm:text-lg font-serif-heading font-bold text-white">8 Yıllık Doğal Ekşi Maya</div>
+                        <div class="text-[11px] text-alabaster/80 mt-0.5">Mideyi yormayan gerçek taş fırın ekmeği</div>
+                    </div>
+
+                    <div class="bg-espresso/80 backdrop-blur-md p-4 rounded-2xl border border-white/15">
+                        <div class="flex items-center gap-2 text-crust-light text-xs font-bold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-car"></i> Zahmetsiz Ulaşım
+                        </div>
+                        <div class="text-base sm:text-lg font-serif-heading font-bold text-white">Kapı Önü Ücretsiz Otopark</div>
+                        <div class="text-[11px] text-alabaster/80 mt-0.5">Bebek arabası ve tekerlekli sandalyeye uygun</div>
+                    </div>
+
+                    <div class="bg-espresso/80 backdrop-blur-md p-4 rounded-2xl border border-white/15">
+                        <div class="flex items-center gap-2 text-crust-light text-xs font-bold uppercase tracking-wider mb-1">
+                            <i class="fa-regular fa-clock"></i> Her Gün Yanınızdayız
+                        </div>
+                        <div class="text-base sm:text-lg font-serif-heading font-bold text-white">07:00 – 23:00 Açık</div>
+                        <div class="text-[11px] text-alabaster/80 mt-0.5">Kişi başı ortalama ₺200 – ₺600</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. HAKKIMIZDA (BİZİM HİKAYEMİZ & AİLE SOFRAMIZ) -->
+    <section id="hakkimizda" class="py-20 px-4 sm:px-6 lg:px-8 bg-alabaster">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Sol: Samimi Görsel Kompozisyonu -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" 
+                             onerror="this.src='https://placehold.co/600x750/F4ECE1/3A261D?text=Sicak+Firindan+Kruvasan'"
+                             alt="Tereyağlı Fransız Kruvasan" class="w-full h-64 sm:h-72 object-cover rounded-3xl shadow-md border border-espresso/10">
+                        <div class="bg-sage text-white p-5 rounded-3xl shadow-md">
+                            <div class="text-xl font-serif-heading font-bold mb-1">Kendi Çocuğumuza Yedirmediğimizi Pişirmiyoruz</div>
+                            <p class="text-xs text-sage-light leading-relaxed">Mutfağımıza endüstriyel katkı maddesi, hazır şurup veya yapay koruyucu girmez; sadece gerçek tereyağı, köy yumurtası ve atalık unlar kullanılır.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="bg-espresso text-alabaster p-5 rounded-3xl shadow-md">
+                            <span class="text-xs uppercase tracking-widest text-crust-light font-semibold">Konyaaltı • Akkuyu</span>
+                            <div class="text-xl font-serif-heading font-bold mt-1">Üç Kuşağın Buluştuğu Mahalle Fırını</div>
+                            <p class="text-xs text-alabaster/80 mt-1">Torunlarıyla kahvaltıya gelen büyükanne ve büyükbabalardan üniversiteli gençlere kadar herkesin ortak evi.</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" 
+                             onerror="this.src='https://placehold.co/600x750/F4ECE1/3A261D?text=Bek+Bakery+Bahce+ve+Salon'"
+                             alt="Bek Bakery & Coffee Mekan Atmosferi" class="w-full h-64 sm:h-72 object-cover rounded-3xl shadow-md border border-espresso/10">
+                    </div>
+                </div>
+
+                <!-- Sağ: Samimi Hikaye Metni ve Aile Dostu Değerlerimiz -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-crust text-xs uppercase tracking-[0.2em] font-bold">
+                        <span class="w-8 h-[2px] bg-crust"></span>
+                        <span>Bizim Hikayemiz & Aile Soframız</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-bold text-espresso leading-tight">
+                        Resmiyetten Uzak, <span class="italic text-crust font-normal">Mis Kokulu Bir Ev Sıcaklığı</span>
+                    </h2>
+
+                    <p class="text-espresso-soft leading-relaxed text-sm sm:text-base">
+                        Konyaaltı’nda, Akdeniz Üniversitesi’nin hemen arkasındaki <strong class="text-espresso">Bek Bakery & Coffee</strong>’yi kurarken tek bir hayalimiz vardı: İnsanların içeri adım attığında kendilerini yabancı bir restoranda değil, çok sevdikleri bir dostlarının geniş mutfağında hissetmeleri.
+                    </p>
+                    <p class="text-espresso-soft leading-relaxed text-sm sm:text-base">
+                        Burada kimse acelesi varmış gibi hissetmez. Çocuklarınız güvenli bahçemizde meyveli pankeklerinin tadını çıkarırken, siz demleme çayınızı veya taze kavrulmuş kahvenizi yudumlayabilir, akşam eve dönerken aileniz için fırından yeni çıkmış sıcacık siyez ekmeğinizi kolunuzun altına alıp çıkabilirsiniz.
+                    </p>
+
+                    <!-- 4 Samimi Aile Özelliği -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-warmwhite p-5 rounded-2xl border border-espresso/10 card-artisan">
+                            <div class="w-10 h-10 rounded-xl bg-crust/15 text-crust flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-people-group text-lg"></i>
+                            </div>
+                            <h3 class="font-serif-heading text-lg font-bold text-espresso">Geniş Aile Masaları & Bahçe</h3>
+                            <p class="text-xs text-espresso-soft mt-1 leading-relaxed">Bebek arabanızla rahatça girebileceğiniz engelsiz alanlar, mama sandalyelerimiz ve ferah bahçemizle tüm aile rahat eder.</p>
+                        </div>
+
+                        <div class="bg-warmwhite p-5 rounded-2xl border border-espresso/10 card-artisan">
+                            <div class="w-10 h-10 rounded-xl bg-crust/15 text-crust flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+                            </div>
+                            <h3 class="font-serif-heading text-lg font-bold text-espresso">Şeffaf & Alerjen Duyarlı Mutfak</h3>
+                            <p class="text-xs text-espresso-soft mt-1 leading-relaxed">Çocuğunuzun veya sizin gıda hassasiyetinizi önemsiyoruz; menümüzdeki her ürünün hikayesini ve alerjenlerini tek tıkla inceleyebilirsiniz.</p>
+                        </div>
+
+                        <div class="bg-warmwhite p-5 rounded-2xl border border-espresso/10 card-artisan">
+                            <div class="w-10 h-10 rounded-xl bg-sage/15 text-sage flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-bread-slice text-lg"></i>
+                            </div>
+                            <h3 class="font-serif-heading text-lg font-bold text-espresso">Her Sabah 07:00’de Sıcak Fırın</h3>
+                            <p class="text-xs text-espresso-soft mt-1 leading-relaxed">Katkısız ekşi mayalı ekmeklerimiz, anne kurabiyelerimiz ve tereyağlı kruvasanlarımız her sabah kendi taş fırınımızda pişer.</p>
+                        </div>
+
+                        <div class="bg-warmwhite p-5 rounded-2xl border border-espresso/10 card-artisan">
+                            <div class="w-10 h-10 rounded-xl bg-sage/15 text-sage flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-mug-saucer text-lg"></i>
+                            </div>
+                            <h3 class="font-serif-heading text-lg font-bold text-espresso">Huzurlu Çalışma & Okuma Köşesi</h3>
+                            <p class="text-xs text-espresso-soft mt-1 leading-relaxed">Kitabını alıp gelen komşularımız ve ders çalışan üniversiteli gençlerimiz için sessiz, prizli ve sıcak bir çalışma köşemiz her zaman hazır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. İNTERAKTİF MENÜ (TIKLANABİLİR HİKAYE & ALERJEN DETAYLI) + MASA DEFTERİM -->
+    <section id="menu" class="py-20 px-4 sm:px-6 lg:px-8 bg-parchment border-t border-b border-espresso/10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Başlık -->
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 text-crust text-xs uppercase tracking-[0.2em] font-bold mb-2">
+                    <span class="w-6 h-[2px] bg-crust"></span>
+                    <span>Hikayesi Olan Doğal Lezzetler</span>
+                    <span class="w-6 h-[2px] bg-crust"></span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-espresso mb-4">Fırın, Kahvaltı & Pastane Menümüz</h2>
+                <p class="text-sm sm:text-base text-espresso-soft leading-relaxed">
+                    Menümüzdeki herhangi bir yiyecek veya içeceğin <strong class="text-crust">üzerine tıklayarak</strong> o lezzetin <strong>mutfak hikayesini, içindekileri ve alerjen bilgilerini</strong> okuyabilirsiniz. Sağdaki <strong>"Masa Defterim"</strong> ile aileniz için seçtiklerinizi kolayca toplayabilirsiniz.
+                </p>
+            </div>
+
+            <!-- Kategori Sekmeleri ve Arama Çubuğu -->
+            <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 bg-warmwhite p-4 rounded-2xl border border-espresso/10 shadow-sm">
+                <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0">
+                    <button onclick="setMenuCategory('Tümü')" data-cat="Tümü" class="menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-espresso text-white transition shrink-0">
+                        Tümü (19)
+                    </button>
+                    <button onclick="setMenuCategory('Aile & Sabah Kahvaltıları')" data-cat="Aile & Sabah Kahvaltıları" class="menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-parchment text-espresso-soft hover:text-espresso transition shrink-0">
+                        🍳 Aile & Sabah Kahvaltıları
+                    </button>
+                    <button onclick="setMenuCategory('Taş Fırından Ekşi Mayalılar')" data-cat="Taş Fırından Ekşi Mayalılar" class="menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-parchment text-espresso-soft hover:text-espresso transition shrink-0">
+                        🥖 Taş Fırından Ekşi Mayalılar
+                    </button>
+                    <button onclick="setMenuCategory('Tatlı & Pastane')" data-cat="Tatlı & Pastane" class="menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-parchment text-espresso-soft hover:text-espresso transition shrink-0">
+                        🍰 Tatlı & Pastane
+                    </button>
+                    <button onclick="setMenuCategory('Sıcak & Soğuk İçecekler')" data-cat="Sıcak & Soğuk İçecekler" class="menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-parchment text-espresso-soft hover:text-espresso transition shrink-0">
+                        ☕ Sıcak & Soğuk İçecekler
+                    </button>
+                </div>
+
+                <!-- Arama Kutusu -->
+                <div class="relative min-w-[260px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-espresso-muted text-xs"></i>
+                    <input id="menu-search-input" oninput="renderMenuItems()" type="text" placeholder="Pankek, siyez ekmeği, kahvaltı, kurabiye ara..." 
+                           class="w-full pl-9 pr-4 py-2.5 rounded-full bg-parchment border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-xs sm:text-sm text-espresso placeholder:text-espresso-muted">
+                </div>
+            </div>
+
+            <!-- Bilgilendirici İpucu Bandı -->
+            <div class="mb-6 px-4 py-3 rounded-2xl bg-sage-light border border-sage/25 flex flex-wrap items-center justify-between gap-2 text-xs text-sage-dark">
+                <div class="flex items-center gap-2 font-medium">
+                    <i class="fa-solid fa-circle-info text-sage text-sm"></i>
+                    <span><strong>İpucu:</strong> Ürün kartlarının üzerine tıklayarak <strong>"Bu Lezzetin Hikayesi"</strong> ve <strong>"Alerjen / Çocuk Uygunluk"</strong> detaylarını açabilirsiniz.</span>
+                </div>
+                <span id="menu-count-label" class="font-bold">19 doğal lezzet listeleniyor</span>
+            </div>
+
+            <!-- Menü + Sağ Sabit "Masa Defterim" Düzeni -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <!-- Sol: Menü Ürünleri Grid (8 Sütun) -->
+                <div class="lg:col-span-8">
+                    <div id="menu-items-grid" class="grid sm:grid-cols-2 gap-4">
+                        <!-- JS ile dinamik olarak doldurulur -->
+                    </div>
+                </div>
+
+                <!-- Sağ: Sabit "Masa Defterim — Soframızı Kur" (4 Sütun) -->
+                <div class="lg:col-span-4 lg:sticky lg:top-28 bg-warmwhite rounded-3xl p-6 border border-espresso/15 shadow-lg space-y-5">
+                    <div class="flex items-start justify-between border-b border-espresso/10 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-crust/15 text-crust flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-book-open text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif-heading text-xl font-bold text-espresso leading-none">Masa Defterim</h3>
+                                <span class="text-xs font-semibold text-crust block mt-1">Soframızı Kur</span>
+                            </div>
+                        </div>
+                        <button onclick="clearBill()" class="text-xs text-espresso-muted hover:text-red-600 underline">Temizle</button>
+                    </div>
+
+                    <p class="text-xs text-espresso-soft leading-relaxed -mt-2">
+                        Ailenizle veya dostlarınızla paylaşacağınız lezzetleri seçin, masanızın hesabını sürpriz olmadan keyifle görün.
+                    </p>
+
+                    <!-- Seçilen Ürünler Listesi -->
+                    <div id="sticky-bill-list" class="max-h-64 overflow-y-auto space-y-2.5 pr-1">
+                        <!-- JS ile doldurulur -->
+                    </div>
+
+                    <!-- Aile / Kişi Sayısına Göre Paylaşım -->
+                    <div class="bg-parchment p-3.5 rounded-2xl border border-espresso/10 space-y-2.5">
+                        <div class="text-xs font-bold text-espresso">Sofradaki Kişi / Aile Seçimi:</div>
+                        <div class="grid grid-cols-2 gap-1.5">
+                            <button onclick="setSplitCount(1, '1 Kişi')" class="split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-espresso text-white transition" data-s="1">
+                                1 Kişi
+                            </button>
+                            <button onclick="setSplitCount(2, '2 Kişi')" class="split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-warmwhite text-espresso border border-espresso/10 transition" data-s="2">
+                                2 Kişi
+                            </button>
+                            <button onclick="setSplitCount(3, 'Çekirdek Aile (3-4 Kişi)')" class="split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-warmwhite text-espresso border border-espresso/10 transition" data-s="3">
+                                Çekirdek Aile (3-4)
+                            </button>
+                            <button onclick="setSplitCount(5, 'Kalabalık Sofra (5+ Kişi)')" class="split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-warmwhite text-espresso border border-espresso/10 transition" data-s="5">
+                                Kalabalık Aile (5+)
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between text-xs pt-2 border-t border-espresso/10">
+                            <span id="sticky-split-label" class="text-espresso-soft">Kişi Başı Ortalama:</span>
+                            <span id="sticky-per-person" class="font-bold text-sage text-sm">0 ₺ / kişi</span>
+                        </div>
+                    </div>
+
+                    <!-- Toplam Tutar ve Rezervasyona Aktarma -->
+                    <div class="border-t border-espresso/10 pt-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-espresso-soft">Soframızın Toplamı:</span>
+                            <span id="sticky-bill-total" class="text-2xl font-serif-heading font-bold text-crust">0 ₺</span>
+                        </div>
+                        <button onclick="transferBillToBooking()" class="w-full py-3.5 rounded-xl bg-crust hover:bg-crust-dark text-white font-bold text-xs sm:text-sm transition shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Bu Sofrayı Rezervasyon Notuma Ekle</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. DENEYİMLER BÖLÜMÜ: SADE, SAMİMİ VE MERAK UYANDIRAN HİKAYELER -->
+    <section id="deneyimler" class="py-20 px-4 sm:px-6 lg:px-8 bg-alabaster">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 text-crust text-xs uppercase tracking-[0.2em] font-bold mb-2">
+                    <span class="w-8 h-[2px] bg-crust"></span>
+                    <span>Fırınımızdan Merak Uyandıran Hikayeler</span>
+                    <span class="w-8 h-[2px] bg-crust"></span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-bold text-espresso mb-4">Bizi Ziyaret Etmeden Önce Bilmek İsteyeceğiniz 4 Küçük Sır</h2>
+                <p class="text-sm sm:text-base text-espresso-soft leading-relaxed">
+                    Bek Bakery & Coffee’de her sabah tekrarlanan ama çoğu misafirimizin perde arkasını merak ettiği o samimi anlar.
+                </p>
+            </div>
+
+            <!-- 4 Sade, Merak Uyandıran Hikaye Kartı -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Hikaye 1 -->
+                <div class="bg-warmwhite rounded-3xl overflow-hidden border border-espresso/10 card-artisan flex flex-col shadow-sm">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" 
+                             onerror="this.src='https://placehold.co/800x450/F4ECE1/3A261D?text=8+Yillik+Eksi+Mayamiz'"
+                             alt="8 Yıllık Ekşi Mayamızın Sırrı" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-espresso/90 text-crust-light text-xs font-bold">
+                            🌙 Gece 04:00 Ritüeli
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-espresso mb-2.5">Gece 04:00'te Uyanan 8 Yıllık Ekşi Mayamızın Sırrı</h3>
+                            <p class="text-sm text-espresso-soft leading-relaxed">
+                                Konyaaltı henüz derin uykudayken fırınımızın ışıkları yanar. Ekmeklerimizin mideyi hiç rahatsız etmemesinin ve çocuklara güvenle yedirilmesinin sebebi; tam 8 yıldır her gün elma ve taş değirmen unuyla beslediğimiz canlı ana mayamızın 36 saatlik sabırlı yolculuğudur.
+                            </p>
+                            <!-- Açılır Merak Kutusu -->
+                            <div id="curiosity-1" class="hidden mt-4 p-4 rounded-2xl bg-parchment border border-crust/30 text-xs text-espresso leading-relaxed">
+                                <strong class="text-crust block mb-1"><i class="fa-solid fa-lightbulb"></i> Biliyor muydunuz?</strong>
+                                Uzun soğuk fermantasyon sırasında ekşi maya bakterileri buğdaydaki zor sindirilen 글üten ağlarını önceden parçalar. Bu yüzden market ekmeği şişkinlik yaparken, gerçek taş fırın siyez ve köy ekmeğimiz tüy gibi hafif hissettirir.
+                            </div>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between gap-3">
+                            <button onclick="toggleCuriosity(1)" id="curiosity-btn-1" class="px-4 py-2.5 rounded-xl bg-parchment hover:bg-crust hover:text-white text-espresso font-bold text-xs transition flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles text-crust"></i>
+                                <span>Sırrını Keşfet: Neden Şişkinlik Yapmaz?</span>
+                            </button>
+                            <a href="#menu" onclick="setMenuCategory('Taş Fırından Ekşi Mayalılar')" class="text-xs font-bold text-crust hover:underline">Ekmekleri Gör →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hikaye 2 -->
+                <div class="bg-warmwhite rounded-3xl overflow-hidden border border-espresso/10 card-artisan flex flex-col shadow-sm">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=80" 
+                             onerror="this.src='https://placehold.co/800x450/F4ECE1/3A261D?text=Aile+Boyu+Pazar+Sabahi'"
+                             alt="Aynı Masada Üç Kuşak" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-sage text-white text-xs font-bold">
+                            👨‍👩‍👧‍👦 Üç Kuşak Bir Arada
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-espresso mb-2.5">Aynı Masada Üç Kuşak: Pazar Sabahlarının Sıcak Ritüeli</h3>
+                            <p class="text-sm text-espresso-soft leading-relaxed">
+                                Bir masada dedesinin demleme çayına eşlik eden sıcak bazlama tost, diğer ucunda torununun neşeyle yediği katkısız meyveli pankek... Bahçemizde telefonların kenara bırakılıp gerçek aile sohbetlerinin başladığı o huzurlu sabahları çok seviyoruz.
+                            </p>
+                            <!-- Açılır Merak Kutusu -->
+                            <div id="curiosity-2" class="hidden mt-4 p-4 rounded-2xl bg-parchment border border-crust/30 text-xs text-espresso leading-relaxed">
+                                <strong class="text-crust block mb-1"><i class="fa-solid fa-lightbulb"></i> Biliyor muydunuz?</strong>
+                                Kahvaltı sofralarımızda kullandığımız reçeller mevsiminde Antalya ve çevresindeki bahçelerden toplanan meyvelerle, tıpkı evdeki annelerimizin yaptığı gibi glikoz şurupsuz olarak kazanlarımızda kaynatılır.
+                            </div>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between gap-3">
+                            <button onclick="toggleCuriosity(2)" id="curiosity-btn-2" class="px-4 py-2.5 rounded-xl bg-parchment hover:bg-crust hover:text-white text-espresso font-bold text-xs transition flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles text-crust"></i>
+                                <span>Sırrını Keşfet: Reçellerimiz Nereden Geliyor?</span>
+                            </button>
+                            <a href="#rezervasyon" class="text-xs font-bold text-crust hover:underline">Aile Masası Ayırt →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hikaye 3 -->
+                <div class="bg-warmwhite rounded-3xl overflow-hidden border border-espresso/10 card-artisan flex flex-col shadow-sm">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80" 
+                             onerror="this.src='https://placehold.co/800x450/F4ECE1/3A261D?text=Kruvasan+ve+Kahve+Kokusu'"
+                             alt="Fırın Kokusunun Kahve Çekirdeğine Karıştığı O An" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-espresso/90 text-crust-light text-xs font-bold">
+                            🥐 Saat 08:30 & 16:00 Zili
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-espresso mb-2.5">Fırın Kokusunun Kahve Çekirdeğine Karıştığı O An</h3>
+                            <p class="text-sm text-espresso-soft leading-relaxed">
+                                Günde iki kez, sabah 08:30’da ve öğleden sonra 16:00’da taş fırınımızın kapakları açıldığında bütün salonu karamelize tereyağı ve tarçın kokusu sarar. Tam o dakikada taze çekilen kahveyle birleşen bu koku, yoldan geçen komşularımızı bile içeri davet eder.
+                            </p>
+                            <!-- Açılır Merak Kutusu -->
+                            <div id="curiosity-3" class="hidden mt-4 p-4 rounded-2xl bg-parchment border border-crust/30 text-xs text-espresso leading-relaxed">
+                                <strong class="text-crust block mb-1"><i class="fa-solid fa-lightbulb"></i> Biliyor muydunuz?</strong>
+                                Kruvasanlarımızın içindeki o bal peteği dokusu, hamurun 3 gün boyunca soğuk mermer tezgahlarda gerçek yayık tereyağı ile 27 katman halinde tek tek katlanmasıyla oluşur; margarin asla kullanılmaz.
+                            </div>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between gap-3">
+                            <button onclick="toggleCuriosity(3)" id="curiosity-btn-3" class="px-4 py-2.5 rounded-xl bg-parchment hover:bg-crust hover:text-white text-espresso font-bold text-xs transition flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles text-crust"></i>
+                                <span>Sırrını Keşfet: 27 Katmanın Hikayesi</span>
+                            </button>
+                            <a href="#menu" onclick="setMenuCategory('Tatlı & Pastane')" class="text-xs font-bold text-crust hover:underline">Pastaneyi Gör →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hikaye 4 -->
+                <div class="bg-warmwhite rounded-3xl overflow-hidden border border-espresso/10 card-artisan flex flex-col shadow-sm">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" 
+                             onerror="this.src='https://placehold.co/800x450/F4ECE1/3A261D?text=Cocuklar+ve+Mutlu+Pastane'"
+                             alt="Camın Arkasındaki Küçük Meraklı Gözler" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-crust text-white text-xs font-bold">
+                            👧 Küçük Misafirlerimiz
+                        </span>
+                    </div>
+                    <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-espresso mb-2.5">Camın Arkasındaki Küçük Meraklı Gözler</h3>
+                            <p class="text-sm text-espresso-soft leading-relaxed">
+                                Bizi ziyaret eden çocukların en sevdiği yer, pasta vitrinimizin ve fırınımızın önüdür. Ustalarımızın hamura şekil verişini izleyen minik misafirlerimize fırından yeni çıkmış sıcak bir kurabiye ikram etmek, günümüzün en mutlu anıdır.
+                            </p>
+                            <!-- Açılır Merak Kutusu -->
+                            <div id="curiosity-4" class="hidden mt-4 p-4 rounded-2xl bg-parchment border border-crust/30 text-xs text-espresso leading-relaxed">
+                                <strong class="text-crust block mb-1"><i class="fa-solid fa-lightbulb"></i> Biliyor muydunuz?</strong>
+                                Çocuklu ailelerimiz için hazırladığımız "Ballı Tarçınlı Sıcak Süt", "Anne Kurabiyesi" ve "Mini Pankek" tabaklarımızda rafine glikoz şurubu veya yapay renklendirici bulunmaz; tamamen ev usulü hazırlanır.
+                            </div>
+                        </div>
+                        <div class="pt-2 flex items-center justify-between gap-3">
+                            <button onclick="toggleCuriosity(4)" id="curiosity-btn-4" class="px-4 py-2.5 rounded-xl bg-parchment hover:bg-crust hover:text-white text-espresso font-bold text-xs transition flex items-center gap-2">
+                                <i class="fa-solid fa-sparkles text-crust"></i>
+                                <span>Sırrını Keşfet: Çocuklara Özel Doğal Dokunuş</span>
+                            </button>
+                            <a href="#menu" class="text-xs font-bold text-crust hover:underline">Menüyü İncele →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MİSAFİR DEĞERLENDİRMELERİ (412 YORUM • 3.9 / 5 PUAN) -->
+    <section id="yorumlar" class="py-20 px-4 sm:px-6 lg:px-8 bg-parchment border-t border-espresso/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                <!-- Sol: Puan Dağılımı Özeti (412 Yorum) -->
+                <div class="lg:col-span-4 bg-warmwhite p-6 sm:p-8 rounded-3xl border border-espresso/10 shadow-sm space-y-6">
+                    <div class="flex items-center justify-between border-b border-espresso/10 pb-4">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-crust font-bold">Samimi Geri Bildirimler</span>
+                            <h3 class="text-2xl font-bold text-espresso mt-1">Misafirlerimiz Ne Diyor?</h3>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-4xl font-serif-heading font-bold text-crust">3.9 <span class="text-lg text-espresso-muted">/ 5</span></div>
+                            <div class="text-xs text-espresso-soft font-medium">412+ Değerlendirme</div>
+                        </div>
+                    </div>
+
+                    <!-- Yıldız Dağılım Çubukları -->
+                    <div class="space-y-3 text-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-espresso">5 Yıldız</span>
+                            <div class="flex-1 h-2.5 bg-parchment rounded-full overflow-hidden">
+                                <div class="h-full bg-sage rounded-full" style="width: 63%"></div>
+                            </div>
+                            <span class="w-14 text-right text-espresso-soft font-medium">258</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-espresso">4 Yıldız</span>
+                            <div class="flex-1 h-2.5 bg-parchment rounded-full overflow-hidden">
+                                <div class="h-full bg-crust rounded-full" style="width: 11%"></div>
+                            </div>
+                            <span class="w-14 text-right text-espresso-soft font-medium">43</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-espresso">3 Yıldız</span>
+                            <div class="flex-1 h-2.5 bg-parchment rounded-full overflow-hidden">
+                                <div class="h-full bg-amber-500 rounded-full" style="width: 3%"></div>
+                            </div>
+                            <span class="w-14 text-right text-espresso-soft font-medium">12</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-espresso">2 Yıldız</span>
+                            <div class="flex-1 h-2.5 bg-parchment rounded-full overflow-hidden">
+                                <div class="h-full bg-orange-400 rounded-full" style="width: 5%"></div>
+                            </div>
+                            <span class="w-14 text-right text-espresso-soft font-medium">22</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 font-bold text-espresso">1 Yıldız</span>
+                            <div class="flex-1 h-2.5 bg-parchment rounded-full overflow-hidden">
+                                <div class="h-full bg-red-400 rounded-full" style="width: 18%"></div>
+                            </div>
+                            <span class="w-14 text-right text-espresso-soft font-medium">77</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-alabaster border border-espresso/10 text-xs text-espresso-soft space-y-2">
+                        <div class="font-bold text-espresso flex items-center gap-1.5">
+                            <i class="fa-solid fa-heart text-crust"></i> Aileler & Komşularımız Neyi Seviyor?
+                        </div>
+                        <p>Doyurucu <strong>Kahvaltı Tabakları</strong>, çocuklarla rahat edilen geniş bahçe, güler yüzlü ekip, sıcak taş fırın ekmekleri ve dingin sohbet ortamı.</p>
+                    </div>
+
+                    <button onclick="toggleReviewModal()" class="w-full py-3.5 rounded-xl bg-espresso hover:bg-crust text-white font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <span>Siz de Anınızı Paylaşın (Yorum Yaz)</span>
+                    </button>
+                </div>
+
+                <!-- Sağ: Gerçek Misafir Yorum Kartları -->
+                <div class="lg:col-span-8 space-y-5">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-espresso">Soframıza Konuk Olanların Yorumları</h3>
+                            <p class="text-xs sm:text-sm text-espresso-soft">Ailelerin, komşularımızın ve üniversiteli gençlerimizin Bek Bakery deneyimleri</p>
+                        </div>
+                    </div>
+
+                    <div id="guest-reviews-grid" class="grid sm:grid-cols-2 gap-4">
+                        <!-- JS ile doldurulur -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. AİLE MASASI REZERVASYONU / SICAK EKMEK AYIRTMA & İLETİŞİM -->
+    <section id="rezervasyon" class="py-20 px-4 sm:px-6 lg:px-8 bg-alabaster border-t border-espresso/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Sol: Aile Dostu Rezervasyon & Ekmek Ayırtma Formu (7 Sütun) -->
+                <div class="lg:col-span-7 bg-warmwhite p-6 sm:p-10 rounded-3xl border border-espresso/15 shadow-xl">
+                    <div class="inline-flex items-center gap-2 text-crust text-xs uppercase tracking-[0.2em] font-bold mb-2">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                        <span>Soframızda Yeriniz Hazır</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-espresso mb-2">Masanızı veya Sıcak Ekmeğinizi Ayıralım</h2>
+                    <p class="text-xs sm:text-sm text-espresso-soft mb-6">
+                        Pazar sabahı aile kahvaltısı, bebek sandalyeli rahat bahçe masası veya akşam eve dönerken fırından sıcak teslim alacağınız ekşi mayalı ekmekleriniz için bize not bırakın.
+                    </p>
+
+                    <form id="booking-form" onsubmit="submitBookingForm(event)" class="space-y-4">
+                        <!-- İşlem Türü Seçimi -->
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5">Nasıl Yardımcı Olalım? *</label>
+                            <select id="book-type" required class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso font-medium">
+                                <option value="Aile & Dost Kahvaltısı Masası">Aile & Dost Kahvaltısı Masası</option>
+                                <option value="Fırından Sıcak Ekmek / Pasta Ayırtma">Fırından Sıcak Ekmek / Pasta Ayırtma (Al-Götür / Arabaya Teslim)</option>
+                                <option value="Tatlı & Kahve Sohbet Masası">Tatlı & Kahve Sohbet Masası</option>
+                                <option value="Sessiz Çalışma / Kitap Okuma Köşesi">Sessiz Çalışma / Kitap Okuma Köşesi</option>
+                            </select>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-espresso mb-1.5">Adınız & Soyadınız *</label>
+                                <input id="book-name" type="text" required placeholder="Örn: Arzu Çelik" 
+                                       class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-espresso mb-1.5">Telefon Numaranız *</label>
+                                <input id="book-phone" type="tel" required placeholder="05XX XXX XX XX" 
+                                       class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-espresso mb-1.5">Tarih *</label>
+                                <input id="book-date" type="date" required 
+                                       class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-espresso mb-1.5">Saat (07:00 - 23:00) *</label>
+                                <select id="book-time" required class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso">
+                                    <option value="08:00">08:00 (İlk Sıcak Fırın & Kahvaltı)</option>
+                                    <option value="09:30" selected>09:30 (Aile Kahvaltısı Saati)</option>
+                                    <option value="11:00">11:00 (Geç Kahvaltı / Brunch)</option>
+                                    <option value="14:30">14:30 (Öğleden Sonra Kahve & Sohbet)</option>
+                                    <option value="16:30">16:30 (Sıcak Kruvasan & Çay Saati)</option>
+                                    <option value="18:30">18:30 (İş Çıkışı Sıcak Ekmek Teslim)</option>
+                                    <option value="20:30">20:30 (Akşam Aile Çayı & Tatlı)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-espresso mb-1.5">Misafir Sayısı *</label>
+                                <select id="book-guests" required class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso">
+                                    <option value="1-2 Kişi">1 - 2 Kişi</option>
+                                    <option value="Çekirdek Aile (3-4 Kişi)" selected>Çekirdek Aile (3 - 4 Kişi)</option>
+                                    <option value="Geniş Aile Sofrası (5-8 Kişi)">Geniş Aile Sofrası (5 - 8 Kişi)</option>
+                                    <option value="Kalabalık Grup (8+ Kişi)">Kalabalık Grup (8+ Kişi)</option>
+                                    <option value="Al-Götür / Arabaya Teslim">Al-Götür / Arabaya Teslim</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Aile Dostu Özel Dokunuş Seçenekleri -->
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5">Aileniz İçin Özel Hazırlıklarımız (İsteğe Bağlı Seçebilirsiniz)</label>
+                            <div class="grid sm:grid-cols-2 gap-2.5">
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-alabaster border border-espresso/15 cursor-pointer hover:border-crust text-xs font-medium text-espresso">
+                                    <input type="checkbox" name="familyPerks" value="Bebek / Mama Sandalyesi Hazırlansın" class="accent-crust w-4 h-4">
+                                    <span>👶 Bebek / Mama Sandalyesi Hazırlansın</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-alabaster border border-espresso/15 cursor-pointer hover:border-crust text-xs font-medium text-espresso">
+                                    <input type="checkbox" name="familyPerks" value="Bahçede Çocuklara Uygun Rahat Masa" checked class="accent-crust w-4 h-4">
+                                    <span>🌿 Bahçede Çocuklara Uygun Rahat Masa</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-alabaster border border-espresso/15 cursor-pointer hover:border-crust text-xs font-medium text-espresso">
+                                    <input type="checkbox" name="familyPerks" value="Bebek Arabası / Engelsiz Yan Masa" class="accent-crust w-4 h-4">
+                                    <span>🛒 Bebek Arabası İçin Geniş Geçişli Masa</span>
+                                </label>
+                                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-alabaster border border-espresso/15 cursor-pointer hover:border-crust text-xs font-medium text-espresso">
+                                    <input type="checkbox" name="familyPerks" value="Eve Dönerken Sıcak Ekmek Ayrılması" class="accent-crust w-4 h-4">
+                                    <span>🥖 Eve Dönerken Sıcak Ekmek Paketi Ayrılsın</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5">Notunuz, Alerjen Hassasiyetiniz veya Masa Defteri Listeniz</label>
+                            <textarea id="book-notes" rows="2" placeholder="Örn: Çocuğumuzun fıstık alerjisi var / 1 adet Domatesli Siyez Ekmeği ayrılmasını rica ederiz..." 
+                                      class="w-full px-4 py-3 rounded-xl bg-alabaster border border-espresso/15 focus:border-crust focus:bg-white focus:outline-none text-sm text-espresso"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-crust hover:bg-crust-dark text-white font-bold text-sm sm:text-base transition shadow-lg shadow-crust/25 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Yerinizi / Sıcak Ekmeğinizi Sevgiyle Ayıralım</span>
+                        </button>
+                    </form>
+
+                    <!-- Rezervasyon Onay Kutusu -->
+                    <div id="booking-confirmation" class="hidden mt-6 p-5 rounded-2xl bg-sage-light border border-sage text-espresso">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sage text-2xl mt-0.5"></i>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-base text-sage-dark">Soframızda Yeriniz Ayrıldı! Hoş Geldiniz.</h4>
+                                <p id="booking-summary-text" class="text-xs text-espresso-soft mt-1 leading-relaxed"></p>
+                                <div class="mt-3 flex flex-wrap items-center gap-3">
+                                    <span class="px-3 py-1 rounded-lg bg-white border border-sage/30 text-xs font-mono font-bold text-crust">
+                                        Kayıt No: <span id="booking-code">#BEK-1042</span>
+                                    </span>
+                                    <a href="tel:+905412165548" class="text-xs font-bold text-sage-dark underline">Bizi Doğrudan Arayın: 0541 216 55 48</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ: İletişim, Çalışma Saatleri & Konum Kartı (5 Sütun) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-espresso text-alabaster p-6 sm:p-8 rounded-3xl shadow-xl space-y-6">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-crust-light font-bold">Kapımız Her Zaman Açık</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Adres & İletişim Bilgilerimiz</h3>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 text-crust-light flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-alabaster/70">Adresimiz</div>
+                                    <div class="text-white font-semibold mt-0.5">Anadolu Cd No: 154, Akkuyu, 07050 Konyaaltı / Antalya</div>
+                                    <div class="text-xs text-crust-light mt-0.5">Akdeniz Üniversitesi Arkası • Kapı Önü Ücretsiz Otoparklı</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 text-crust-light flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-alabaster/70">Telefon & Sıcak Ekmek Ayırtma Hattımız</div>
+                                    <a href="tel:+905412165548" class="text-white font-bold text-lg hover:text-crust-light transition block mt-0.5">0541 216 55 48</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 text-crust-light flex items-center justify-center shrink-0">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs text-alabaster/70">Çalışma Saatlerimiz</div>
+                                    <div class="text-white font-semibold mt-0.5">Her Gün: 07:00 – 23:00</div>
+                                    <div class="text-xs text-emerald-300 mt-0.5">Sabah ilk fırından gece çay-kahve sohbetine kadar</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aile Dostu Olanaklar Özeti -->
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/10 space-y-2 text-xs">
+                            <div class="font-bold text-crust-light mb-1">Aileniz İçin Düşündüğümüz Detaylar:</div>
+                            <div class="flex justify-between py-1 border-b border-white/10">
+                                <span class="text-alabaster/80">Çocuk & Bebek Konforu</span>
+                                <span class="font-semibold text-white">Mama Sandalyesi & Bahçe</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-white/10">
+                                <span class="text-alabaster/80">Otopark & Erişim</span>
+                                <span class="font-semibold text-white">Ücretsiz Otopark & Engelsiz Giriş</span>
+                            </div>
+                            <div class="flex justify-between py-1">
+                                <span class="text-alabaster/80">Servis Seçenekleri</span>
+                                <span class="font-semibold text-white">Masaya Servis • Al-Götür • Arabaya Servis</span>
+                            </div>
+                        </div>
+
+                        <!-- Doğrudan Yol Tarifi ve Arama Butonları -->
+                        <div class="grid sm:grid-cols-2 gap-3 pt-2">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Bek+Bakery+Coffee+Anadolu+Cd+No+154+Akkuyu+Konyaalti+Antalya" target="_blank" rel="noopener noreferrer" 
+                               class="py-3.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/15 transition">
+                                <i class="fa-solid fa-map-location-dot text-crust-light"></i>
+                                <span>Yol Tarifi Al (Harita)</span>
+                            </a>
+                            <a href="tel:+905412165548" 
+                               class="py-3.5 px-4 rounded-xl bg-crust hover:bg-crust-light text-white font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Fırınımızı Ara</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-espresso text-alabaster/80 border-t border-white/10 py-12 px-4 sm:px-6 lg:px-8 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-2xl bg-crust text-white flex items-center justify-center">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                </div>
+                <div>
+                    <span class="font-serif-heading text-lg font-bold text-white tracking-wide">BEK BAKERY & COFFEE</span>
+                    <p class="text-[11px] text-alabaster/65">Konyaaltı'nda Ailenizin Sıcak Taş Fırını • Anadolu Cd No: 154, Akkuyu / Antalya • 0541 216 55 48</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6">
+                <a href="#hakkimizda" class="hover:text-crust-light transition">Aile Soframız</a>
+                <a href="#menu" class="hover:text-crust-light transition">Menü & Alerjenler</a>
+                <a href="#deneyimler" class="hover:text-crust-light transition">Fırın Hikayeleri</a>
+                <a href="#yorumlar" class="hover:text-crust-light transition">Misafirlerimiz</a>
+                <a href="#rezervasyon" class="hover:text-crust-light transition">Yer Ayırt</a>
+            </div>
+
+            <div class="text-alabaster/55 text-[11px]">
+                © 2026 Bek Bakery & Coffee Konyaaltı. Sevgi ve Doğal Ekşi Mayayla Pişirildi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ÜRÜN HİKAYESİ, İÇERİĞİ VE ALERJEN BİLGİLERİ MODALI (MENÜDE ÜRÜNE TIKLANINCA AÇILIR) -->
+    <div id="item-detail-modal" onclick="if(event.target === this) closeItemModal()" class="fixed inset-0 z-50 hidden bg-espresso/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-warmwhite rounded-3xl max-w-2xl w-full overflow-hidden border border-espresso/15 shadow-2xl my-8">
+            <!-- Üst Görsel ve Kapat Butonu -->
+            <div class="relative h-56 sm:h-64 bg-parchment">
+                <img id="modal-item-img" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/25 to-transparent"></div>
+                <button onclick="closeItemModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-warmwhite/90 hover:bg-crust hover:text-white text-espresso flex items-center justify-center shadow-lg transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <div class="absolute bottom-4 left-6 right-6 flex items-end justify-between gap-4">
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                            <span id="modal-item-cat" class="px-3 py-0.5 rounded-full bg-crust text-white text-[11px] font-bold"></span>
+                            <span id="modal-item-family-tag" class="px-3 py-0.5 rounded-full bg-sage text-white text-[11px] font-bold"></span>
+                        </div>
+                        <h3 id="modal-item-title" class="text-2xl sm:text-3xl font-bold text-white leading-tight"></h3>
+                    </div>
+                    <div id="modal-item-price" class="text-2xl sm:text-3xl font-serif-heading font-bold text-crust-light shrink-0 bg-espresso/80 px-3.5 py-1.5 rounded-2xl border border-white/15"></div>
+                </div>
+            </div>
+
+            <!-- Modal İçerik Gövdesi -->
+            <div class="p-6 sm:p-8 space-y-5">
+                <!-- 1. Bu Lezzetin Hikayesi -->
+                <div class="bg-alabaster p-5 rounded-2xl border border-crust/25">
+                    <div class="flex items-center gap-2 text-crust text-xs font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Bu Lezzetin Hikayesi</span>
+                    </div>
+                    <p id="modal-item-story" class="text-sm text-espresso leading-relaxed"></p>
+                </div>
+
+                <!-- 2. İçindekiler & Porsiyon Notu -->
+                <div>
+                    <div class="flex items-center gap-2 text-espresso text-xs font-bold uppercase tracking-wider mb-1.5">
+                        <i class="fa-solid fa-Seedling text-sage"></i>
+                        <span>İçindekiler & Sunum Notu</span>
+                    </div>
+                    <p id="modal-item-ingredients" class="text-xs sm:text-sm text-espresso-soft leading-relaxed"></p>
+                </div>
+
+                <!-- 3. Alerjen & Hassasiyet Bilgileri -->
+                <div class="bg-parchment/70 p-4 rounded-2xl border border-espresso/10">
+                    <div class="flex items-center justify-between gap-2 mb-2.5">
+                        <div class="flex items-center gap-2 text-espresso text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-shield-heart text-crust"></i>
+                            <span>Alerjen & Hassasiyet Bilgileri</span>
+                        </div>
+                        <span class="text-[11px] text-espresso-muted">Şeffaf Mutfak Güvencesi</span>
+                    </div>
+                    <div id="modal-item-allergens" class="flex flex-wrap gap-2 mb-2.5">
+                        <!-- JS ile alerjen etiketleri eklenir -->
+                    </div>
+                    <p id="modal-item-allergy-note" class="text-[11px] text-espresso-soft leading-relaxed"></p>
+                </div>
+
+                <!-- Alt Butonlar -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                    <button id="modal-add-btn" class="w-full sm:flex-1 py-3.5 px-6 rounded-xl bg-crust hover:bg-crust-dark text-white font-bold text-sm transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Masa Defterime Ekle</span>
+                    </button>
+                    <button onclick="closeItemModal()" class="w-full sm:w-auto py-3.5 px-6 rounded-xl bg-parchment hover:bg-espresso hover:text-white text-espresso font-bold text-xs sm:text-sm transition">
+                        Menüye Dön
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- KAYAR "MASA DEFTERİM" ÇEKMECESİ (MODAL / DRAWER) -->
+    <div id="bill-drawer" class="fixed inset-0 z-50 hidden bg-espresso/60 backdrop-blur-sm flex justify-end">
+        <div class="bg-warmwhite w-full max-w-md h-full p-6 sm:p-8 shadow-2xl flex flex-col justify-between border-l border-espresso/15">
+            <div>
+                <div class="flex items-center justify-between border-b border-espresso/10 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-espresso">Masa Defterim</h3>
+                        <p class="text-xs text-espresso-soft">Aileniz ve Dostlarınız İçin Seçtiğiniz Lezzetler</p>
+                    </div>
+                    <button onclick="toggleBillDrawer()" class="w-9 h-9 rounded-full bg-parchment text-espresso hover:bg-crust hover:text-white flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div id="drawer-bill-items" class="my-5 max-h-[52vh] overflow-y-auto space-y-3 pr-1">
+                    <!-- JS ile doldurulur -->
+                </div>
+            </div>
+
+            <div class="border-t border-espresso/10 pt-4 space-y-4">
+                <div class="flex items-center justify-between text-xs text-espresso-soft">
+                    <span>Paylaşım (<span id="drawer-split-count">1 Kişi</span>):</span>
+                    <strong id="drawer-per-person" class="text-sage font-bold text-sm">0 ₺ / kişi</strong>
+                </div>
+                <div class="flex items-center justify-between text-xl font-bold text-espresso">
+                    <span>Soframızın Toplamı:</span>
+                    <span id="drawer-total" class="text-crust font-serif-heading text-2xl">0 ₺</span>
+                </div>
+                <div class="flex gap-2.5">
+                    <button onclick="clearBill()" class="px-4 py-3 rounded-xl bg-parchment text-espresso-soft hover:text-red-600 text-xs font-bold transition">
+                        Temizle
+                    </button>
+                    <button onclick="transferBillToBooking(); toggleBillDrawer();" class="flex-1 py-3.5 rounded-xl bg-crust hover:bg-crust-dark text-white font-bold text-xs sm:text-sm transition">
+                        Rezervasyon Notuma Aktar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MİSAFİR YORUM EKLEME MODALI -->
+    <div id="review-modal" class="fixed inset-0 z-50 hidden bg-espresso/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-warmwhite rounded-3xl max-w-md w-full p-6 sm:p-8 border border-espresso/15 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-espresso/10 pb-3">
+                <h3 class="text-xl font-bold text-espresso">Anınızı Bizimle Paylaşın</h3>
+                <button onclick="toggleReviewModal()" class="w-8 h-8 rounded-full bg-parchment text-espresso flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form onsubmit="submitNewGuestReview(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-bold text-espresso mb-1">Adınız & Soyadınız *</label>
+                    <input id="rev-author" type="text" required placeholder="Örn: Mert Yılmaz" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-espresso/15 text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-espresso mb-1">Puanınız *</label>
+                        <select id="rev-rating" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-espresso/15 text-sm">
+                            <option value="5">★★★★★ (5/5)</option>
+                            <option value="4">★★★★☆ (4/5)</option>
+                            <option value="3">★★★☆☆ (3/5)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-espresso mb-1">En Sevdiğiniz Lezzet</label>
+                        <input id="rev-badge" type="text" placeholder="Örn: Aile Kahvaltısı" class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-espresso/15 text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-espresso mb-1">Yorumunuz *</label>
+                    <textarea id="rev-text" rows="3" required placeholder="Ailenizle kahvaltımız, ekmeklerimiz veya bahçemiz hakkındaki düşünceleriniz..." class="w-full px-3.5 py-2.5 rounded-xl bg-alabaster border border-espresso/15 text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-crust hover:bg-crust-dark text-white font-bold text-sm transition">
+                    Yorumu Paylaş
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- BİLDİRİM TOAST -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden bg-espresso text-warmwhite px-4 py-3 rounded-2xl shadow-xl border border-crust/50 flex items-center gap-2.5 text-xs sm:text-sm">
+        <i class="fa-solid fa-heart text-crust-light"></i>
+        <span id="toast-text">İşlem tamamlandı</span>
+    </div>
+
+    <!-- JAVASCRIPT: HİKAYELİ & ALERJENLİ MENÜ, MASA DEFTERİM, MERAK KUTULARI VE YORUMLAR -->
+    <script>
+        // Bek Bakery & Coffee 19 Gerçek Menü Ürünü (Hikayesi, İçindekileri ve Alerjen Detaylarıyla)
+        const menuData = [
+            // 1. Aile & Sabah Kahvaltıları
+            {
+                id: 1,
+                name: "Bek'in Aile Boyu Gurme Kahvaltı Tabağı",
+                category: "Aile & Sabah Kahvaltıları",
+                price: 495,
+                badge: "👨‍👩‍👧 Aile Favorisi",
+                familyTag: "👨‍👩‍👧‍👦 Tüm Aile İçin Uygun",
+                desc: "Fırından yeni çıkmış sıcak ekşi mayalı ekmeklerimiz, seçkin yerel peynirler, köy yumurtası, ev yapımı reçeller ve Akdeniz yeşillikleri.",
+                story: "Pazar sabahları evde kurulan o uzun ve neşeli aile sofralarından ilham aldık. Tabaktaki her peyniri yerel mandıralardan seçiyor, reçellerimizi mevsim meyveleriyle glikoz şurupsuz olarak kendi mutfağımızda kaynatıyoruz. Yanında gelen sıcacık taş fırın ekmeklerimizle sofra bir anda şenleniyor.",
+                ingredients: "Ezine beyaz peyniri, eski kaşar, İzmir tulumu, gezen tavuk yumurtası, yeşil kırma ve siyah sele zeytin, ev yapımı çilek/portakal reçeli, bal-kaymak, Çengelköy salatalık, kokteyl domates ve sıcak ekşi mayalı ekmek sepeti.",
+                allergens: ["Gluten (Taş Fırın Ekmeği)", "Süt ve Süt Ürünleri", "Yumurta"],
+                allergyNote: "Çölyak veya gluten hassasiyeti olan misafirlerimiz için ekmek sepetini ayrı servis edebiliriz.",
+                image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 2,
+                name: "Protein Kahvaltı Tabağı",
+                category: "Aile & Sabah Kahvaltıları",
+                price: 450,
+                badge: "🔥 En Çok Tercih Edilen",
+                familyTag: "💪 Doğal & Besleyici",
+                desc: "Yüksek proteinli, doyurucu ve taze kahvaltı tabağı; köy yumurtası, seçkin peynirler, ceviz içi, zeytin, yeşillik ve siyez ekmeği ile.",
+                story: "Güne zinde başlamak isteyen komşularımız ve spor yapan gençlerimiz için tek tabakta tam besleyici bir denge kurduk. Atalık siyez ekmeğimizin yüksek lif ve protein oranını, doğal köy yumurtası ve yerli cevizle birleştirerek saatlerce tok tutan temiz bir kahvaltı hazırladık.",
+                ingredients: "2 adet haşlanmış veya göz köy yumurtası, lor ve dil peyniri, tam ceviz içi, avokado dilimleri, zeytinyağlı Akdeniz yeşillikleri ve 2 dilim kızarmış Domatesli Siyez Ekmeği.",
+                allergens: ["Gluten (Siyez Buğdayı)", "Süt ve Süt Ürünleri", "Yumurta", "Kuruyemiş (Ceviz)"],
+                allergyNote: "Ceviz alerjisi olan misafirlerimiz için kuruyemişsiz olarak hazırlanabilmektedir.",
+                image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 3,
+                name: "Fransız Somonlu Omlet",
+                category: "Aile & Sabah Kahvaltıları",
+                price: 495,
+                badge: "Şefin Dokunuşu",
+                familyTag: "🐟 Omega-3 Kaynağı",
+                desc: "Füme somon, ipeksi krem peynir, taze dereotu ve kendi fırınımızın ekşi mayalı ekmek dilimleri eşliğinde.",
+                story: "Klasik Fransız omlet tekniğini, gerçek tereyağında düşük ısıda sabırla pişirerek içi bulut gibi yumuşak kalacak şekilde uyguluyoruz. Üzerine eklediğimiz füme somon ve taze bahçe otlarıyla hafta sonu kahvaltılarınıza zarif bir lezzet katıyoruz.",
+                ingredients: "3 adet köy yumurtası, Norveç füme somon, taze krem peynir, frenk soğanı, dereotu, tereyağı ve kızarmış ekşi mayalı sarı buğday ekmeği.",
+                allergens: ["Yumurta", "Balık (Somon)", "Süt ve Süt Ürünleri", "Gluten"],
+                allergyNote: "Deniz ürünlerine hassasiyeti olan misafirlerimiz için sade veya peynirli-otlu olarak da pişirilebilir.",
+                image: "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                name: "Çocukların Favorisi Mini Pankek & Meyve Tabağı",
+                category: "Aile & Sabah Kahvaltıları",
+                price: 290,
+                badge: "👶 Çocukların Gözdesi",
+                familyTag: "👶 Çocuklar İçin Çok Uygun",
+                desc: "Günlük taze sütle hazırlanan puf mini pankekler, mevsim meyveleri, doğal çiçek balı ve gerçek Belçika çikolatası ile.",
+                story: "Minik misafirlerimizin tabağını bitirdiğinde yüzünde oluşan o gülümseme bizim en büyük mutluluğumuz. Pankek hamurumuzda hazır toz karışımlar veya kabartma ajanları yerine taze süt, köy yumurtası ve gerçek vanilya kullanıyoruz.",
+                ingredients: "10 adet sıcak mini pankek, taze Antalya çileği ve muz dilimleri, doğal çiçek balı, ev yapımı fındık kreması ve eritilmiş sütlü Belçika çikolatası.",
+                allergens: ["Gluten", "Süt ve Süt Ürünleri", "Yumurta", "Kuruyemiş (Fındık)"],
+                allergyNote: "Bebekler ve küçük çocuklar için çikolata/bal yerine sadece taze meyve ve pekmez ile servis edilebilir.",
+                image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                name: "Anne Usulü Sıcak Bazlama Tost",
+                category: "Aile & Sabah Kahvaltıları",
+                price: 240,
+                badge: "Sıcak & Samimi",
+                familyTag: "🏠 Ev Usulü Lezzet",
+                desc: "Kendi fırınımızın yumuşacık ekşi mayalı bazlaması arasında eriyen kaşar peyniri, ev yapımı domates sosu ve tereyağı.",
+                story: "Çocukluğumuzda okuldan eve geldiğimizde annemizin yaptığı o mis kokulu, dışı tereyağlı çıtır, içi sıcacık uzayan peynirli tostların birebir aynısı. Bazlamasını bile sabah kendi taş fırınımızda pişiriyoruz.",
+                ingredients: "Taş fırın ekşi mayalı bazlama, Kars kaşar peyniri, isteğe bağlı kasap sucuk veya beyaz peynir, fesleğenli ev yapımı domates sosu ve söğüş yeşillik.",
+                allergens: ["Gluten", "Süt ve Süt Ürünleri"],
+                allergyNote: "Çocuklar için baharatsız ve sadece peynirli olarak hazırlanabilir.",
+                image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // 2. Taş Fırından Ekşi Mayalılar
+            {
+                id: 6,
+                name: "Domatesli & Kekikli Siyez Ekmeği",
+                category: "Taş Fırından Ekşi Mayalılar",
+                price: 180,
+                badge: "🌾 Atalık Tohum",
+                familyTag: "🌿 %100 Katkısız & Doğal",
+                desc: "10 bin yıllık genetiği değişmemiş atalık siyez unundan, güneşte kurutulmuş domates ve Toros dağ kekiği ile yoğrulmuş somun.",
+                story: "Kastamonu’nun taş değirmenlerinde öğütülen atalık siyez ununu, Antalya güneşi altında kurutulmuş tatlı domatesler ve Toroslar'dan toplanan yabani kekikle buluşturduk. Dilimleyip kızarttığınızda üzerine sadece biraz zeytinyağı gezdirmeniz bile başlı başına bir ziyafettir.",
+                ingredients: "%100 Taş değirmen Siyez unu, 8 yıllık doğal ekşi maya, içme suyu, kaya tuzu, kuru domates ve dağ kekiği.",
+                allergens: ["Gluten (Düşük Glutenli Atalık Siyez)"],
+                allergyNote: "Süt, yumurta ve yağ içermez (%100 Vegan). Sindirimi en kolay ekmek çeşidimizdir.",
+                image: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 7,
+                name: "Cevizli Köy Ekmeği",
+                category: "Taş Fırından Ekşi Mayalılar",
+                price: 260,
+                badge: "Bol Cevizli",
+                familyTag: "🧠 Çocuk Gelişimine Dost",
+                desc: "Bol yerli kelebek ceviz içi ve doğal ekşi maya ile 36 saat soğuk fermantasyondan geçerek taş fırında pişirilen büyük somun.",
+                story: "Anadolu’nun bereketli köy fırınlarının geleneğini Konyaaltı’na taşıdık. Hamuru yoğururken içine cömertçe eklediğimiz cevizler pişerken kavruluyor ve ekmeğin iç dokusuna hafif morumsu rengini ve o eşsiz ceviz aromalarını bırakıyor.",
+                ingredients: "Tam buğday ve sarı buğday unu, yerli ceviz içi, doğal ekşi maya, kaynak suyu, deniz tuzu.",
+                allergens: ["Gluten", "Kuruyemiş (Ceviz)"],
+                allergyNote: "Süt ve yumurta içermez. Serin ortamda bez torbada 5 güne kadar tazeliğini korur.",
+                image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 8,
+                name: "Klasik Sarı Buğday Ekşi Mayalı Ekmek",
+                category: "Taş Fırından Ekşi Mayalılar",
+                price: 160,
+                badge: "Günlük Temel Ekmek",
+                familyTag: "🥖 Evinizin Günlük Ekmeği",
+                desc: "Dışı çıtır kabuklu, içi gözenekli ve yumuşak; her öğünde aile sofranıza eşlik edecek doğal taş fırın ekmeği.",
+                story: "Mahallemizdeki pek çok ailenin akşam eve dönerken fırınımızdan aldığı temel ekmektir. Sadece un, su, kaya tuzu ve 8 yıllık ekşi mayamızla üretilir; dördüncü bir yabancı madde asla içermez.",
+                ingredients: "Durum sarı buğday unu, taş değirmen tam buğday unu, doğal ekşi maya, su ve kaya tuzu.",
+                allergens: ["Gluten"],
+                allergyNote: "Süt ürünü, yumurta, şeker veya koruyucu katkı maddesi kesinlikle içermez.",
+                image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 9,
+                name: "Tereyağlı Fransız Kruvasan",
+                category: "Taş Fırından Ekşi Mayalılar",
+                price: 150,
+                badge: "27 Katmanlı",
+                familyTag: "🧈 %100 Gerçek Tereyağlı",
+                desc: "Gerçek yayık tereyağı ile 3 günde hazırlanan, dışı altın sarısı pul pul çıtır, içi yumuşacık petek dokulu kruvasan.",
+                story: "İyi bir kruvasan sabır ister. Hamurumuzu 3 gün boyunca dinlendirip gerçek tereyağı ile 27 katman halinde açıyoruz. Sabah 08:30’da fırından çıktığında elinize aldığınız o hafiflik ve çıtırtı, gerçek tereyağının imzasıdır.",
+                ingredients: "Özel kruvasan unu, %82 süt yağlı gerçek tereyağı, taze süt, köy yumurtası, ekşi maya, az miktarda pancar şekeri ve tuz.",
+                allergens: ["Gluten", "Süt ve Süt Ürünleri (Tereyağı)", "Yumurta"],
+                allergyNote: "Margarin veya bitkisel palm yağı kesinlikle kullanılmaz.",
+                image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 10,
+                name: "Çikolatalı Sıcak Açma",
+                category: "Taş Fırından Ekşi Mayalılar",
+                price: 110,
+                badge: "Sabah Sıcak",
+                familyTag: "👧 Çocukların Sabah Neşesi",
+                desc: "Pamuk gibi yumuşacık ekşi mayalı brioche hamuru içinde akışkan gerçek Belçika çikolatası dolgulu sıcak açma.",
+                story: "Geleneksel Türk pastane açmasını, Fransız brioche hamurunun yumuşaklığı ve gerçek Belçika çikolatasıyla birleştirdik. Okula giderken veya hafta sonu kahvaltısında hem çocukların hem büyüklerin ilk bitirdiği lezzettir.",
+                ingredients: "Buğday unu, taze süt, tereyağı, yumurta, Belçika bitter/sütlü çikolata dolgusu ve fındık parçacıkları.",
+                allergens: ["Gluten", "Süt ve Süt Ürünleri", "Yumurta", "Kuruyemiş (İz Miktarda Fındık)"],
+                allergyNote: "Sabah 07:30 ve öğlen 13:00 fırın tepsilerimizden sıcak servis edilir.",
+                image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // 3. Tatlı & Pastane
+            {
+                id: 11,
+                name: "Antep Fıstıklı Dubai Çikolatalı Pasta",
+                category: "Tatlı & Pastane",
+                price: 395,
+                badge: "🔥 İmza Tatlımız",
+                familyTag: "✨ Paylaşımlık Porsiyon",
+                desc: "Ev yapımı Boz Antep fıstığı ezmesi, tereyağında kavrulmuş çıtır tel kadayıf ve yoğun Belçika çikolatası katmanlarıyla.",
+                story: "Son dönemin en sevilen lezzetini Bek Bakery mutfağında tamamen doğal malzemelerle yeniden yorumladık. Hazır fıstık sosu yerine birinci sınıf Boz Antep fıstığını kendi mutfağımızda çekiyor, tereyağında kavurduğumuz çıtır kadayıfla her çatalda unutulmaz bir doku sunuyoruz.",
+                ingredients: "%100 Boz Antep fıstığı ezmesi, kavrulmuş taze tel kadayıf, Belçika callebaut sütlü ve bitter çikolata, taze süt kreması, pandispanya.",
+                allergens: ["Kuruyemiş (Antep Fıstığı)", "Gluten", "Süt ve Süt Ürünleri", "Yumurta"],
+                allergyNote: "Yoğun Antep fıstığı içerir; kuruyemiş alerjisi olan misafirlerimizin dikkatine sunarız.",
+                image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 12,
+                name: "El Yapımı Japon Mochi",
+                category: "Tatlı & Pastane",
+                price: 125,
+                badge: "Glutensiz Seçenek",
+                familyTag: "🍓 Hafif & Eğlenceli",
+                desc: "İpeksi pirinç hamuru içinde ferahlatıcı meyveli veya çikolatalı krema/dondurma dolgulu el yapımı özel tatlı.",
+                story: "Hem çocukların hem de hafif tatlı sevenlerin hayran kaldığı küçük mutluluk topları! Geleneksel Japon usulü buharda pişirilen tatlı pirinç hamurunu, Antalya'nın taze meyve püreleri ve ipeksi kremayla dolduruyoruz.",
+                ingredients: "Tatlı pirinç unu (Mochiko), taze meyve püresi (çilek/mango) veya Belçika çikolatalı krema, süt kreması, pancar şekeri.",
+                allergens: ["Süt ve Süt Ürünleri"],
+                allergyNote: "Buğday unu içermez (pirinç unundan yapılır); hafif ve serinletici bir tatlı alternatifidir.",
+                image: "https://images.unsplash.com/photo-1582716401301-b2407dc7563d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 13,
+                name: "San Sebastian Cheesecake",
+                category: "Tatlı & Pastane",
+                price: 310,
+                badge: "İpeksi Kıvam",
+                familyTag: "🍫 Gerçek Belçika Çikolatalı",
+                desc: "Üzeri karamelize, içi akışkan ve kremsi; yanında sıcak Belçika çikolatası sosu ile servis edilen günlük cheesecake.",
+                story: "İspanya’nın Bask bölgesinden çıkan bu efsane tatlıyı, yüksek ısıda kısa süre fırınlayarak tam ortası akışkan kalacak şekilde pişiriyoruz. Yanında sıcak çikolata sosunu döktüğünüzde kahve sohbetlerinin en tatlı eşlikçisi oluyor.",
+                ingredients: "Taze labne ve krem peynir, süt kreması, köy yumurtası, pancar şekeri, gerçek vanilya çubuğu özütü ve Belçika çikolatası.",
+                allergens: ["Süt ve Süt Ürünleri", "Yumurta", "Gluten (Çok Az Miktarda)"],
+                allergyNote: "Günlük taze üretilir, koruyucu içermez.",
+                image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 14,
+                name: "Tarçınlı & Cevizli Anne Kurabiyesi (Porsiyon)",
+                category: "Tatlı & Pastane",
+                price: 135,
+                badge: "Çay Yanı Klasiği",
+                familyTag: "👵 Anneanne Tarifimiz",
+                desc: "Ağızda dağılan tereyağlı dokusu, bol ceviz içi ve mis gibi Seylan tarçını kokusuyla ev yapımı sıcak kurabiyeler.",
+                story: "Cam kavanozlarımızın kapağı açıldığında bütün kafeyi çocukluğumuzun mutfak kokusu sarar. Yoğurt, tereyağı, bol ceviz ve tarçınla hazırladığımız bu kurabiyeler, demleme çayımızın ve çocukların süt saatlerinin en samimi dostudur.",
+                ingredients: "Buğday unu, tereyağı, ev yoğurdu, yumurta, yerli ceviz içi, Seylan tarçını, pancar şekeri.",
+                allergens: ["Gluten", "Süt ve Süt Ürünleri", "Yumurta", "Kuruyemiş (Ceviz)"],
+                allergyNote: "Çocuklar için az şekerli ve tamamen doğal malzemelerle fırınlanmıştır.",
+                image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // 4. Sıcak & Soğuk İçecekler
+            {
+                id: 15,
+                name: "Taze Sıkma Antalya Portakal Suyu",
+                category: "Sıcak & Soğuk İçecekler",
+                price: 145,
+                badge: "%100 Doğal C Vitamini",
+                familyTag: "👶 Çocuklar İçin En Doğalı",
+                desc: "Siparişiniz alındığı anda Finike ve Antalya bahçelerinin sulu portakallarından sıkılan, şeker ve su ilavesiz meyve suyu.",
+                story: "Antalya’da yaşamanın en güzel ayrıcalığı dalından yeni toplanmış narenciyedir. Çocuklarınıza ve ailenize gönül rahatlığıyla içirebilmeniz için sipariş verdiğiniz anda gözünüzün önünde sıkıyor, içine tek damla su veya şeker eklemiyoruz.",
+                ingredients: "%100 Taze sıkılmış Finike / Antalya portakalı.",
+                allergens: ["Bilinen Alerjen İçermez"],
+                allergyNote: "Gluten, süt, yumurta ve ilave şeker içermez. Turunçgil hassasiyeti olanlar dikkat etmelidir.",
+                image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 16,
+                name: "Caffè Latte / Flat White",
+                category: "Sıcak & Soğuk İçecekler",
+                price: 215,
+                badge: "3. Nesil Kahve",
+                familyTag: "🌱 Bitkisel Süt Seçenekli",
+                desc: "Taze kavrulmuş %100 Arabica çift shot espresso ve kadifemsi mikro süt köpüğünün dengeli buluşması.",
+                story: "Ekşi mayalı kruvasanlarımızın en iyi arkadaşı! Çekirdeklerimizi her hafta taze kavrulmuş olarak tedarik ediyor, sütü yakmadan tam ideal sıcaklığında (65°C) krema kıvamına getirerek kahvenin doğal tatlılığını ortaya çıkarıyoruz.",
+                ingredients: "%100 Arabica taze çekilmiş espresso, günlük tam yağlı süt (veya isteğe göre Yulaf / Badem sütü).",
+                allergens: ["Süt ve Süt Ürünleri (Bitkisel süt seçilirse içermez)"],
+                allergyNote: "Laktoz hassasiyeti olan misafirlerimiz için laktozsuz süt, yulaf sütü ve badem sütü seçeneklerimiz mevcuttur.",
+                image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 17,
+                name: "Geleneksel Demleme Çay Potu",
+                category: "Sıcak & Soğuk İçecekler",
+                price: 120,
+                badge: "Sıcak Sohbetlerin Dostu",
+                familyTag: "🫖 Aile Boyu Demlik",
+                desc: "Rize'nin ilk sürgün yaprak çaylarından porselen demlikte ağır ağır demlenen, tavşan kanı sıcak çay potu.",
+                story: "Ne kadar iyi kahve demlersek demleyelim, aile kahvaltılarının ve samimi akşam sohbetlerinin baş tacı her zaman iyi demlenmiş bir çaydır. Çayımızı bekletmeden, kireçsiz suyla porselen demliklerde her zaman taze demliyoruz.",
+                ingredients: "Doğu Karadeniz ilk hasat siyah yaprak çay, doğal kaynak suyu.",
+                allergens: ["Bilinen Alerjen İçermez"],
+                allergyNote: "Hiçbir alerjen içermez.",
+                image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 18,
+                name: "Ev Yapımı Naneli Limonata",
+                category: "Sıcak & Soğuk İçecekler",
+                price: 155,
+                badge: "Anne Usulü Ferahlık",
+                familyTag: "🍋 Katkısız & Ev Yapımı",
+                desc: "Gerçek limon kabuğu rendesi, taze sıkılmış limon suyu ve bahçe nanesi ile hazırlanan katkısız ev limonatası.",
+                story: "Hazır limonata konsantrelerinden tamamen uzak, tıpkı evde annelerimizin limon kabuklarını az şekerle ovarak hazırladığı geleneksel tarifle yapıyoruz. Antalya sıcağında çocukların da büyüklerin de en ferahlatıcı molasıdır.",
+                ingredients: "Taze Antalya limonu suyu ve kabuğu, taze bahçe nanesi, içme suyu, az miktarda pancar şekeri.",
+                allergens: ["Bilinen Alerjen İçermez"],
+                allergyNote: "Yapay renklendirici, sitrik asit tozu veya koruyucu içermez.",
+                image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 19,
+                name: "Çocuklar İçin Ballı & Tarçınlı Sıcak Süt",
+                category: "Sıcak & Soğuk İçecekler",
+                price: 115,
+                badge: "👶 Miniklere Özel",
+                familyTag: "👶 Çocuklar İçin Çok Uygun",
+                desc: "Ilık günlük süt, doğal yayla çiçek balı ve üzerinde hafif Seylan tarçını dokunuşuyla içimi yumuşacık süt.",
+                story: "Anne ve babalar kahvelerini yudumlarken küçük misafirlerimizin de kendilerine özel sıcacık bir kupası olsun istedik. Sütü çocukların ağzını yakmayacak ılık derecede hazırlıyor, doğal çiçek balıyla tatlandırıyoruz.",
+                ingredients: "Günlük pastörize tam yağlı süt, doğal çiçek balı, isteğe bağlı toz tarçın.",
+                allergens: ["Süt ve Süt Ürünleri"],
+                allergyNote: "1 yaş altı bebekler için balsız (sade ılık süt) olarak veya bitkisel sütle hazırlanabilir.",
+                image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Gerçek Misafir Yorumları (Samimi Aile & Komşu Deneyimleri)
+        const guestReviews = [
+            {
+                author: "Erdem Aydın",
+                rating: 5,
+                badge: "Protein Kahvaltı • 450 ₺",
+                date: "Ailece Hafta Sonu Kahvaltısı",
+                text: "Çok samimi ve sıcak bir mekan, çalışanlar aileden biri gibi güler yüzlü. Protein kahvaltı 450 TL, hem çok doyurucu hem de kullanılan ekmek ve peynirler çok taze. Gönül rahatlığıyla tavsiye ederim."
+            },
+            {
+                author: "Arzu Çelik",
+                rating: 5,
+                badge: "Huzurlu Atmosfer & Tatlılar",
+                date: "Konyaaltı Komşumuz",
+                text: "İçeri girdiğiniz anda evinizdeymişsiniz gibi huzurlu bir havası var. Çocuklarla bahçede oturmak çok rahat, tatlıları ve kahveleri harika. Saatlerce sıkılmadan vakit geçirebileceğiniz bir yer."
+            },
+            {
+                author: "Semih Soylu",
+                rating: 5,
+                badge: "Taş Fırın Ekmekleri & Pastane",
+                date: "Düzenli Misafirimiz",
+                text: "Konyaaltı'nda ailecek gidilebilecek en temiz ve özenli fırın-kafe. Özellikle domatesli siyez ekmeği ve sıcak kruvasanları bağımlılık yapıyor, her şey mükemmel."
+            },
+            {
+                author: "Sevilay Güner",
+                rating: 5,
+                badge: "Ferah Bahçe & Mama Sandalyesi",
+                date: "Çocuklu Aile Ziyareti",
+                text: "Geniş, ferah ve çocuklu aileler için çok düşünceli tasarlanmış bir mekan. Bebek arabasıyla rahatça girdik, mama sandalyesi hemen geldi. Ekşi mayalı ürünleri çocuklarımıza güvenle yedirdik."
+            }
+        ];
+
+        let activeCategory = "Tümü";
+        let billItems = [];
+        let splitCount = 1;
+        let splitLabelText = "1 Kişi";
+
+        // Canlı Açık/Kapalı Durumu (07:00 - 23:00)
+        function updateLiveOpenStatus() {
+            const now = new Date();
+            const hour = now.getHours();
+            const badge = document.getElementById('live-status-badge');
+            if (!badge) return;
+
+            if (hour >= 7 && hour < 23) {
+                badge.innerHTML = `
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Fırınımız Sıcak & Açık • Her Gün 07:00 – 23:00</span>
+                `;
+            } else {
+                badge.innerHTML = `
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span>Sabah 07:00'de Sıcak Ekmeklerimizle Açılıyoruz</span>
+                `;
+            }
+        }
+
+        // Menüyü Render Etme (Karta Tıklanınca Hikaye & Alerjen Modalı Açılır)
+        function renderMenuItems() {
+            const query = document.getElementById('menu-search-input').value.toLowerCase().trim();
+            const grid = document.getElementById('menu-items-grid');
+            const label = document.getElementById('menu-count-label');
+
+            const filtered = menuData.filter(item => {
+                const matchCat = activeCategory === "Tümü" || item.category === activeCategory;
+                const matchSearch = item.name.toLowerCase().includes(query) ||
+                                    item.desc.toLowerCase().includes(query) ||
+                                    item.story.toLowerCase().includes(query) ||
+                                    item.category.toLowerCase().includes(query);
+                return matchCat && matchSearch;
+            });
+
+            label.textContent = `${filtered.length} doğal lezzet listeleniyor`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="sm:col-span-2 bg-warmwhite p-10 rounded-3xl text-center border border-espresso/10">
+                        <i class="fa-solid fa-wheat-awn text-crust text-2xl mb-2"></i>
+                        <p class="font-bold text-espresso">Aradığınız lezzet bulunamadı.</p>
+                        <button onclick="setMenuCategory('Tümü'); document.getElementById('menu-search-input').value=''; renderMenuItems();" class="mt-2 text-xs text-crust underline font-semibold">Tüm menüyü göster</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(item => {
+                const allergenPreview = item.allergens[0] === "Bilinen Alerjen İçermez"
+                    ? `<span class="text-[10px] font-semibold text-sage-dark bg-sage-light px-2 py-0.5 rounded-md">✓ Alerjen İçermez</span>`
+                    : `<span class="text-[10px] font-medium text-espresso-muted bg-alabaster px-2 py-0.5 rounded-md border border-espresso/10"><i class="fa-solid fa-shield-heart text-crust mr-1"></i>${item.allergens.length} Alerjen Bilgisi</span>`;
+
+                return `
+                <div onclick="openItemModal(${item.id})" class="bg-warmwhite rounded-2xl p-4 border border-espresso/10 card-artisan flex flex-col justify-between shadow-sm cursor-pointer group">
+                    <div class="flex gap-3.5 items-start">
+                        <div class="relative shrink-0">
+                            <img src="${item.image}" 
+                                 onerror="this.src='https://placehold.co/200x200/F4ECE1/3A261D?text=Bek+Bakery'"
+                                 alt="${item.name}" 
+                                 class="w-24 h-24 rounded-xl object-cover border border-espresso/10 group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <span class="inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-parchment text-crust mb-1">${item.badge}</span>
+                                    <h4 class="font-serif-heading text-base sm:text-lg font-bold text-espresso group-hover:text-crust transition leading-snug">${item.name}</h4>
+                                </div>
+                                <span class="font-serif-heading font-bold text-base sm:text-lg text-crust shrink-0">${item.price} ₺</span>
+                            </div>
+                            <p class="text-xs text-espresso-soft mt-1 line-clamp-2 leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-3.5 pt-2.5 border-t border-espresso/10 flex items-center justify-between gap-2">
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="text-[11px] font-bold text-crust group-hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-book-open"></i> Hikayesi & Alerjenler
+                            </span>
+                            ${allergenPreview}
+                        </div>
+                        <button onclick="event.stopPropagation(); addItemToBill(${item.id})" class="px-3 py-1.5 rounded-xl bg-parchment hover:bg-crust hover:text-white text-espresso text-xs font-bold transition flex items-center gap-1 shrink-0">
+                            <i class="fa-solid fa-plus text-[10px]"></i> Sofraya Ekle
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // Ürün Hikayesi ve Alerjen Detay Modalını Açma
+        function openItemModal(id) {
+            const item = menuData.find(m => m.id === id);
+            if (!item) return;
+
+            document.getElementById('modal-item-img').src = item.image;
+            document.getElementById('modal-item-img').alt = item.name;
+            document.getElementById('modal-item-cat').textContent = item.category;
+            document.getElementById('modal-item-family-tag').textContent = item.familyTag;
+            document.getElementById('modal-item-title').textContent = item.name;
+            document.getElementById('modal-item-price').textContent = `${item.price} ₺`;
+            document.getElementById('modal-item-story').textContent = item.story;
+            document.getElementById('modal-item-ingredients').textContent = item.ingredients;
+            document.getElementById('modal-item-allergy-note').textContent = item.allergyNote;
+
+            const allergensContainer = document.getElementById('modal-item-allergens');
+            allergensContainer.innerHTML = item.allergens.map(al => {
+                if (al === "Bilinen Alerjen İçermez") {
+                    return `<span class="px-3 py-1 rounded-full bg-sage text-white text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-check"></i> ${al}</span>`;
+                }
+                return `<span class="px-3 py-1 rounded-full bg-warmwhite border border-crust/40 text-espresso text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-wheat-awn text-crust"></i> ${al}</span>`;
+            }).join('');
+
+            const addBtn = document.getElementById('modal-add-btn');
+            addBtn.onclick = function() {
+                addItemToBill(item.id);
+                closeItemModal();
+            };
+
+            document.getElementById('item-detail-modal').classList.remove('hidden');
+        }
+
+        function closeItemModal() {
+            document.getElementById('item-detail-modal').classList.add('hidden');
+        }
+
+        // Deneyimler Bölümü Merak Kutusu ("Biliyor muydunuz?") Aç/Kapa
+        function toggleCuriosity(num) {
+            const box = document.getElementById(`curiosity-${num}`);
+            if (!box) return;
+            box.classList.toggle('hidden');
+        }
+
+        function setMenuCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.menu-cat-btn').forEach(btn => {
+                if (btn.getAttribute('data-cat') === cat) {
+                    btn.className = "menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-espresso text-white transition shrink-0";
+                } else {
+                    btn.className = "menu-cat-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-parchment text-espresso-soft hover:text-espresso transition shrink-0";
+                }
+            });
+            renderMenuItems();
+        }
+
+        // Masa Defterim İşlevleri
+        function addItemToBill(id) {
+            const product = menuData.find(m => m.id === id);
+            if (!product) return;
+
+            const existing = billItems.find(b => b.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                billItems.push({ ...product, qty: 1 });
+            }
+            updateBillUI();
+            showToast(`"${product.name}" Masa Defterinize eklendi (${product.price} ₺)`);
+        }
+
+        function changeBillQty(id, delta) {
+            const idx = billItems.findIndex(b => b.id === id);
+            if (idx === -1) return;
+            billItems[idx].qty += delta;
+            if (billItems[idx].qty <= 0) {
+                billItems.splice(idx, 1);
+            }
+            updateBillUI();
+        }
+
+        function clearBill() {
+            billItems = [];
+            updateBillUI();
+        }
+
+        function setSplitCount(count, labelText) {
+            splitCount = count;
+            splitLabelText = labelText || `${count} Kişi`;
+            document.querySelectorAll('.split-btn').forEach(btn => {
+                if (parseInt(btn.getAttribute('data-s')) === count) {
+                    btn.className = "split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-espresso text-white transition";
+                } else {
+                    btn.className = "split-btn px-2.5 py-2 rounded-xl text-[11px] font-bold bg-warmwhite text-espresso border border-espresso/10 transition";
+                }
+            });
+            updateBillUI();
+        }
+
+        function updateBillUI() {
+            const totalQty = billItems.reduce((sum, i) => sum + i.qty, 0);
+            const totalPrice = billItems.reduce((sum, i) => sum + (i.price * i.qty), 0);
+            const perPerson = Math.round(totalPrice / splitCount);
+
+            document.getElementById('bill-badge-count').textContent = totalQty;
+            document.getElementById('sticky-bill-total').textContent = `${totalPrice.toLocaleString('tr-TR')} ₺`;
+            document.getElementById('sticky-per-person').textContent = `${perPerson.toLocaleString('tr-TR')} ₺ / kişi`;
+
+            document.getElementById('drawer-total').textContent = `${totalPrice.toLocaleString('tr-TR')} ₺`;
+            document.getElementById('drawer-split-count').textContent = splitLabelText;
+            document.getElementById('drawer-per-person').textContent = `${perPerson.toLocaleString('tr-TR')} ₺ / kişi`;
+
+            const emptyHtml = `
+                <div class="text-center py-6 text-xs text-espresso-muted">
+                    <i class="fa-solid fa-utensils text-crust text-lg mb-1.5 block"></i>
+                    Masa defteriniz henüz boş. Menüden <strong>"+ Sofraya Ekle"</strong> butonuna tıklayarak aileniz için seçtiklerinizi buraya ekleyebilirsiniz.
+                </div>
+            `;
+
+            const listHtml = billItems.map(item => `
+                <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-alabaster border border-espresso/10 text-xs">
+                    <div class="min-w-0 flex-1">
+                        <div class="font-bold text-espresso truncate">${item.name}</div>
+                        <div class="text-espresso-muted">${item.price} ₺ x ${item.qty}</div>
+                    </div>
+                    <div class="flex items-center gap-1.5 shrink-0">
+                        <button onclick="changeBillQty(${item.id}, -1)" class="w-6 h-6 rounded-md bg-parchment hover:bg-espresso hover:text-white font-bold">-</button>
+                        <span class="w-4 text-center font-bold">${item.qty}</span>
+                        <button onclick="changeBillQty(${item.id}, 1)" class="w-6 h-6 rounded-md bg-parchment hover:bg-espresso hover:text-white font-bold">+</button>
+                        <span class="font-bold text-crust ml-1 w-14 text-right">${item.price * item.qty} ₺</span>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('sticky-bill-list').innerHTML = billItems.length ? listHtml : emptyHtml;
+            document.getElementById('drawer-bill-items').innerHTML = billItems.length ? listHtml : emptyHtml;
+        }
+
+        function toggleBillDrawer() {
+            document.getElementById('bill-drawer').classList.toggle('hidden');
+        }
+
+        function transferBillToBooking() {
+            if (billItems.length > 0) {
+                const summary = billItems.map(i => `${i.qty}x ${i.name}`).join(', ');
+                const total = billItems.reduce((sum, i) => sum + (i.price * i.qty), 0);
+                document.getElementById('book-notes').value = `Masa Defterim Listesi (${total} ₺): ${summary}`;
+                showToast("Seçtiğiniz lezzetler rezervasyon notunuza eklendi!");
+            }
+            document.getElementById('rezervasyon').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Misafir Yorumlarını Render Etme
+        function renderGuestReviews() {
+            const container = document.getElementById('guest-reviews-grid');
+            container.innerHTML = guestReviews.map(r => {
+                const stars = Array.from({ length: r.rating }, () => '<i class="fa-solid fa-star"></i>').join('');
+                return `
+                    <div class="bg-warmwhite p-6 rounded-3xl border border-espresso/10 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <div class="flex text-crust text-xs gap-1">${stars}</div>
+                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-parchment text-espresso">${r.badge}</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-espresso-soft leading-relaxed italic">"${r.text}"</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-espresso/10 flex items-center justify-between text-xs">
+                            <span class="font-bold text-espresso">${r.author}</span>
+                            <span class="text-espresso-muted">${r.date}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleReviewModal() {
+            document.getElementById('review-modal').classList.toggle('hidden');
+        }
+
+        function submitNewGuestReview(e) {
+            e.preventDefault();
+            const author = document.getElementById('rev-author').value;
+            const rating = parseInt(document.getElementById('rev-rating').value);
+            const badge = document.getElementById('rev-badge').value || "Aile Misafirimiz";
+            const text = document.getElementById('rev-text').value;
+
+            guestReviews.unshift({
+                author,
+                rating,
+                badge,
+                date: "Yeni Paylaşıldı",
+                text
+            });
+
+            renderGuestReviews();
+            toggleReviewModal();
+            e.target.reset();
+            showToast("Güzel yorumunuz için yürekten teşekkür ederiz!");
+        }
+
+        // Rezervasyon Formu Gönderimi
+        function submitBookingForm(e) {
+            e.preventDefault();
+            const type = document.getElementById('book-type').value;
+            const name = document.getElementById('book-name').value;
+            const date = document.getElementById('book-date').value;
+            const time = document.getElementById('book-time').value;
+            const guests = document.getElementById('book-guests').value;
+
+            const checkedPerks = Array.from(document.querySelectorAll('input[name="familyPerks"]:checked')).map(cb => cb.value);
+            const perksText = checkedPerks.length > 0 ? ` (${checkedPerks.join(', ')})` : '';
+
+            const code = "#BEK-" + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('booking-code').textContent = code;
+            document.getElementById('booking-summary-text').innerHTML = `
+                Sevgili <strong>${name}</strong>, <strong>${date}</strong> günü saat <strong>${time}</strong> için 
+                <strong>${type}</strong> (${guests}${perksText}) kaydınız alınmıştır. Sizi ve ailenizi ağırlamak için sabırsızlanıyoruz!
+            `;
+            document.getElementById('booking-confirmation').classList.remove('hidden');
+            showToast("Masanız / Sıcak ekmeğiniz sizin için ayrıldı!");
+        }
+
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobile-nav');
+            const icon = document.getElementById('mobile-nav-icon');
+            nav.classList.toggle('hidden');
+            icon.className = nav.classList.contains('hidden') ? 'fa-solid fa-bars text-lg' : 'fa-solid fa-xmark text-lg';
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-text').textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3200);
+        }
+
+        window.onload = function() {
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('book-date');
+            if (dateInput) {
+                dateInput.value = today;
+                dateInput.min = today;
+            }
+            updateLiveOpenStatus();
+            renderMenuItems();
+            updateBillUI();
+            renderGuestReviews();
+        };
+    </script>
+</body>
+</html>
